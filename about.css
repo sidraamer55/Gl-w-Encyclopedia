@@ -179,3 +179,98 @@ i{
 #next-btn{
     font-size: 33px;
 }
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+MEDIA QUERIES for smaller devices: */
+
+@media (max-width: 768px) {
+    .center-text {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .book {
+        width: 200px; /* Smaller book width */
+        height: 350px; /* Smaller book height */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding on main container */
+    }
+
+    .front,
+    .back {
+        padding: 5px; /* Reduce padding on front and back */
+    }
+
+    .back-content p {
+        font-size: 5px; /* Smaller font size for readability */
+    }
+
+    #prev-btn,
+    #next-btn {
+        font-size: 10px; /* Smaller button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .center-text h1 {
+        font-size: 20px; /* Smaller heading size */
+        margin-bottom: 50px; /* Add some space after the heading */
+    }
+
+ 
+
+    .front,
+    .back {
+        padding: 5px; /* Minimal padding for smaller screens */
+    }
+
+    .back-content p {
+        font-size: 10px; /* Smaller font size for better fit */
+        line-height: 1.2; /* Better line spacing */
+    }
+
+    #prev-btn,
+    #next-btn {
+        font-size: 18px; /* Smaller button size for phones */
+        padding: 5px 10px; /* Add some padding for better tap area */
+    }
+
+    main {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center; /* Center elements horizontally */
+    }
+
+    #prev-btn {
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+
+    .front-content,
+    .back-content{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.back-content{
+    transform: rotateY(180deg);
+}
+
+
+#book {
+    transform: none !important;
+}
+#prevBtn, #nextBtn {
+    transform: none !important;
+}
+
+
+
+}
