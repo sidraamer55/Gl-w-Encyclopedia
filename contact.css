@@ -1,0 +1,198 @@
+/*=================================
+
+
+ CONTACT PAGE 
+
+
+=================================*/
+
+/* create root for css variables:  */
+:root{
+    --firstfont:  Arial, sans-serif;
+    --secondfont: "Josefin Sans";
+    --thirdfont: "Agu Display";
+    --firstcolor: #e0dfdb;
+    --secondcolor: #CEDEBD;
+    --thirdcolor: #788d5f;
+    --fourthcolor: #353d2f;
+    --fifthcolor: #0fa50f;
+  }
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--secondfont);
+    }
+
+  body {
+    font-family: var(--secondfont);
+    background-color: var(--secondcolor);
+    color: var(--fourthcolor);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+.btn{
+    color:  var(--fourthcolor);
+  }
+  
+  
+  /*contact*/
+  .contact-info a{
+    color: var(--firstcolor) ;
+  }
+  #contact{
+    padding: 100px 0;
+    background: var(--fourthcolor);
+  }
+  #contact .container1{
+    max-width: 900px;
+  }
+  #contact .contact-content{
+    display: flex;
+    justify-content:space-evenly ;
+    align-items: center;
+  }
+  #contact .contact-content .contact-info div {
+    margin: 30px;
+    line-height: 1.7;
+  }
+  #contact .contact-content .contact-info h3{
+    font-size: 28px;
+    color: var(--fifthcolor);
+    margin-bottom: 10px;
+  
+  }
+  #contact .contact-content .contact-info p{
+    color: var(--firstcolor);
+  
+  }
+  #contact .contact-content .contact-info i{
+    margin-right: 5px;
+  
+  }
+  /* form{
+    width: 50%;
+  
+  }
+  form input{
+    display: block;
+    width: 100%;
+    padding: 20px 15px ;
+    margin: 20px 0;
+  } */
+  #contact .btn {
+    background-color:var(--fifthcolor);
+    color: var(--firstcolor);
+    font-size: 16px;
+    padding: 3px 5px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    
+  }
+  #contact .btn:hover{
+    background-color: transparent;
+    border-color: var(--secondcolor);
+    color: var(--firstcolor);
+  }
+  
+  .fa-brands{
+    padding: 1px 5px ;
+    margin: 20px 0;
+  }
+  
+  .fa-solid{
+    padding: 3px 5px ;
+   }
+  
+  .fa-regular{
+    padding: 5px 5px ;
+  
+  }
+  
+  .contact {
+    font-family: var(--secondfont);
+    font-size: 16px; /* Sets a comfortable font size */
+    color: var(--fourthcolor); /* Dark gray text color for readability */
+    background-color: whitesmoke; /* Light background color for contrast */
+    padding: 15px; /* Adds space inside the paragraph */
+    border: 1px solid var(--firstcolor); /* Light border for definition */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(12, 69, 16, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Adds space above and below the paragraph and centers it */
+    width: 100%; /* Sets a width for the paragraph */
+    text-align: center; /* Centers the text inside the paragraph */
+  }
+  
+  .contact:hover{
+    transform: scale(1.1);
+    box-shadow: 1 0.5 1 1 #353d2f;
+    font-family: var(--thirdfont);
+    background-color: var(--firstcolor);
+  }
+  
+ 
+
+  .footer {
+    background-color: var(--fourthcolor);
+    color: var(--firstcolor);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+
+
+
+
+
+/* ==========================
+
+   MEDIA QUERIES
+
+========================== */
+
+/* Tablets and Larger Phones */
+@media (max-width: 768px) {
+  #contact .contact-content {
+      flex-direction: column; /* Stack contact info and form vertically */
+      align-items: stretch; /* Stretch items to full width */
+  }
+
+  .contact-info,
+  .contact-form {
+      width: 100%; /* Full width on mobile */
+      margin-bottom: 20px;  /* Add some space */
+  }
+}
+
+/* Smaller Mobile Devices */
+@media (max-width: 480px) {
+  .contact-intro {
+      font-size: 1rem; /* Smaller font size */
+      padding: 15px; /* Reduced padding */
+  }
+
+  form input,
+  form textarea {
+      padding: 10px; /* Smaller padding */
+      font-size: 0.9rem; /* Smaller font size */
+  }
+
+  #contact .contact-info h3 {
+      font-size: 22px; /* Adjusted font size for smaller screens */
+  }
+
+  .fa-brands {
+      font-size: 1.2rem; /* Adjusted size for smaller screens */
+  }
+
+  .btn {
+      font-size: 14px; /* Smaller font size */
+      padding: 8px 16px; /* Smaller padding */
+  }
+}
