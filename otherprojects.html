@@ -73,6 +73,7 @@
     .text {
         position: relative;
         z-index: 2; /* Ensure text stays above the overlay */
+        margin: 1px;
     }
     
     .slide .slide1 .text h2 {
@@ -87,52 +88,48 @@
     
     /* Background for Each Slide */
     .slide:nth-child(1) {
-        background-image: url('bg1.jpg'); /* Image for the first slide */
+        background-image: url('design.png'); /* Image for the first slide */
     }
     
     .slide:nth-child(2) {
-        background-image: url('slide2.webp'); /* Image for the second slide */
+        background-image: url('portfolio.png'); /* Image for the second slide */
     }
     
     .slide:nth-child(3) {
-        background-image: url('slide3.webp'); /* Image for the third slide */
+        background-image: url('thoughtpad.png'); /* Image for the third slide */
     }
     
     .slide:nth-child(4) {
-        background-image: url('slide4.webp'); /* Image for the fourth slide */
+        background-image: url('budget.png'); /* Image for the fourth slide */
     }
     
     .slide:nth-child(5) {
-        background-image: url('grip.png'); /* Image for the fifth slide */
+        background-image: url('weather.png'); /* Image for the fifth slide */
     }
-    .slide:nth-child(6) {
-        background-image: url('grip.png'); /* Image for the fifth slide */
-    }
+   
 
 
      /* Background for Each Slide1 */
      .slide1:nth-child(1) {
-        background-image: url('bg2.jpg'); /* Image for the first slide */
+        background-image: url('watch.png'); /* Image for the first slide */
     }
     
     .slide1:nth-child(2) {
-        background-image: url('bg3.jpg'); /* Image for the second slide */
+        background-image: url('todolist.png'); /* Image for the second slide */
     }
     
     .slide1:nth-child(3) {
-        background-image: url('slide3.webp'); /* Image for the third slide */
+        background-image: url(''); /* Image for the third slide */
     }
     
     .slide1:nth-child(4) {
-        background-image: url('slide4.webp'); /* Image for the fourth slide */
+        background-image: url('grip.png'); /* Image for the fourth slide */
     }
     
     .slide1:nth-child(5) {
-        background-image: url('grip.png'); /* Image for the fifth slide */
+        background-image: url('bg1.jpg'); /* Image for the fifth slide */
     }
-    .slide1:nth-child(6) {
-        background-image: url('grip.png'); /* Image for the fifth slide */
-    }
+
     
   
     
@@ -158,10 +155,29 @@
         border-radius: 5px;
         font-size: 25px;
         box-shadow: none;
+        /* margin: 1px; */
     }
-    button:hover , a:hover{
+
+    /* button{
+        margin: 10px;
+    } */
+
+    .navbar-brand{
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--firstcolor);
+      background-color: transparent;
+      cursor: pointer;
+      text-decoration: none;
+}
+
+    .navbar-brand:hover{
+    color: var(--fifthcolor);
+}
+
+    /* button:hover , a:hover{
         transform: scale(1.05s);
-    }
+    } */
     </style>
 
   </head>
@@ -189,20 +205,20 @@
                   <a class="nav-link active" aria-current="page" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="articls.html">Articls</a>
+                  <a class="nav-link active" aria-current="page" href="library.html">Library</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="Contact.html">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="otherprojects.html">Other Projects</a>
+                  <a class="nav-link active" aria-current="page" href="otherprojects.html"><u>Other Projects</u></a>
                 </li>
           
               </ul>
-              <form class="d-flex mt-3" role="search">
+              <!-- <form class="d-flex mt-3" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+              </form> -->
             </div>
           </div>
         </div>
@@ -223,7 +239,7 @@
                     <div class="text">
                       <h1>DesignJourney Project</h1>
                         <br><br>
-                        <button> <a href="https://designjourney.netlify.app/" class="normal">webSite</a></button>
+                        <button> <a href="https://designjourney55.netlify.app/" class="normal">webSite</a></button>
                         <button> <a href="https://github.com/sidraamer55/Design-Journey.git" class="normal">gitHub</a></button>
                     </div>
                 </div>
@@ -233,7 +249,7 @@
                     <div class="text">
                         <h1>Portfolio Project</h1>
                         <br><br>
-                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="https://portfoliosidra.netlify.app" class="normal">webSite</a></button>
                         <button> <a href="https://github.com/sidraamer55/My-Portfolio.git" class="normal">gitHub</a></button>
                     </div>
                 </div>
@@ -243,7 +259,7 @@
                     <div class="text">
                         <h1>ThoughtPad Project</h1>
                         <br><br>
-                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="https://thoughtpad55.netlify.app/" class="normal">webSite</a></button>
                         <button> <a href="https://github.com/sidraamer55/Thought-Pad.git" class="normal">gitHub</a></button>
                     </div>
                 </div>
@@ -253,7 +269,7 @@
                     <div class="text">
                         <h1>Budget Project</h1>
                         <br><br>
-                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="https://budget5.netlify.app/" class="normal">webSite</a></button>
                         <button> <a href="shttps://github.com/sidraamer55/myBudget.git" class="normal">gitHub</a></button>
                     </div>
                 </div>
@@ -261,22 +277,12 @@
                 <!-- Slide 5 -->
                 <div class="slide">
                     <div class="text">
-                        <h1>Grip Project</h1>
+                        <h1>Weather Project</h1>
                         <br><br>
-                        <button> <a href="shop.html" class="normal">webSite</a></button>
-                        <button> <a href="https://github.com/sidraamer55/grip.git" class="normal">gitHub</a></button>
+                        <button> <a href="https://aweather5.netlify.app/" class="normal">webSite</a></button>
+                        <button> <a href="https://github.com/sidraamer55/weather_app-main.gitv" class="normal">gitHub</a></button>
                     </div>
                 </div>
-
-                <!-- Slide 6 -->
-                <div class="slide">
-                  <div class="text">
-                      <h1>Weather Project</h1>
-                      <br><br>
-                      <button> <a href="https://ouriweather.netlify.app/" class="normal">webSite</a></button>
-                      <button> <a href="https://github.com/sidraamer55/weather_app-main.gitv" class="normal">gitHub</a></button>
-                  </div>
-              </div>
             </div>
         </div>
     </section>
@@ -291,7 +297,7 @@
                     <div class="text">
                       <h1>stopwatch Project</h1>
                         <br><br>
-                        <button> <a href="https://stopwatchmain.netlify.app/" class="normal">webSite</a></button>
+                        <button> <a href="https://stoppwatch55.netlify.app/" class="normal">webSite</a></button>
                         <button> <a href="https://github.com/sidraamer55/stopwatch-main.git" class="normal">gitHub</a></button>
                     </div>
                 </div>
@@ -301,7 +307,7 @@
                     <div class="text">
                         <h1>ToDo List Project</h1>
                         <br><br>
-                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="https://todoliist5.netlify.app/" class="normal">webSite</a></button>
                         <button> <a href="https://github.com/sidraamer55/todo_list.git" class="normal">gitHub</a></button>
                     </div>
                 </div>
@@ -319,30 +325,20 @@
                 <!-- Slide 4 -->
                 <div class="slide1">
                     <div class="text">
-                        <h1>Robotics Project</h1>
+                        <h1>Grip Project</h1>
                         <br><br>
-                        <button> <a href="shop.html" class="normal">webSite</a></button>
-                        <button> <a href="shop.html" class="normal">gitHub</a></button>
+                        <button> <a href="https://playgrip.netlify.app/" class="normal">webSite</a></button>
+                        <button> <a href="https://github.com/sidraamer55/grip.git" class="normal">gitHub</a></button>
                     </div>
                 </div>
     
                 <!-- Slide 5 -->
                 <div class="slide1">
-                    <div class="text">
-                        <h1>Country Project</h1>
-                        <br><br>
-                        <button> <a href="shop.html" class="normal">webSite</a></button>
-                        <button> <a href="shop.html" class="normal">gitHub</a></button>
-                    </div>
-                </div>
-
-                <!-- Slide 6 -->
-                <div class="slide1">
                   <div class="text">
                       <h1>Encyclopedia Project</h1>
                       <br><br>
-                      <button> <a href="shop.html" class="normal">webSite</a></button>
-                      <button> <a href="shop.html" class="normal">gitHub</a></button>
+                      <button> <a href="https://glowencyclopediaa.netlify.app/" class="normal">webSite</a></button>
+                      <button> <a href="https://github.com/sidraamer55/Gl-w-Encyclopedia.git" class="normal">gitHub</a></button>
                   </div>
               </div>
             </div>

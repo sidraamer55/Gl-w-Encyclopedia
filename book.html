@@ -1,0 +1,755 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<!-- font font-awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+ <!--second google font: -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rouge+Script&family=Stalemate&display=swap" rel="stylesheet">
+
+ <!--third google font: -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rouge+Script&family=Stalemate&display=swap" rel="stylesheet">
+
+ <!-- linked html page with style page: -->
+<link rel="stylesheet" href="style.css">
+
+
+<!-- add style to about page  -->
+<style>
+.center-text {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 20vh; /* Takes up full viewport height */
+}
+
+.book{
+position: relative;
+width: 350px;
+height: 500px;
+transition: transform 0.5s;
+}
+
+main {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+
+
+	height :100vh ; 
+	background-size:auto auto;
+	margin-bottom:none ;
+	margin-top:none ;
+	margin-right:none ;
+}
+
+
+.papper{
+position: absolute;
+width: 100%;
+height:100%;
+left: 0;
+top: 0;
+perspective: 1500px;
+}
+
+.front,
+.back{
+background-color: var(--firstcolor);
+position: absolute;
+width: 100%;
+height:100%;
+left: 0;
+top: 0;
+transform-origin: left;
+transition: transform 0.5s;
+}
+
+
+.front{
+z-index: 1;
+backface-visibility: hidden;
+border-left: 3px solid var(--secondcolor);
+padding: 20px; /* Adds space around content */
+}
+
+.back{
+z-index: 0;
+display: flexbox;
+padding: 20px; /* Adds space around content */
+}
+
+.flipped .front,
+.flipped .back{
+    transform: rotateY(-180deg);
+}
+
+.back-content{
+    transform: rotateY(180deg);
+}
+
+.front-content, h1 {
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.front-content,
+.back-content{
+width: 100%;
+height:100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.back-content p {
+    font-size: 1.2em; /* Larger font size for readability */
+    margin-bottom: 10px; /* Spacing between paragraphs */
+}
+
+button{
+border: none;
+background-color: transparent;
+cursor: pointer;
+margin: 10px;
+transition: transform 0.5s;
+color: var(--fourthcolor);
+}
+
+button:focus{
+    outline: none;
+}
+
+
+button:hover i{
+    color: var(--thirdcolor);
+}
+
+i{
+    font-size: auto;
+}
+
+/* pappers control  */
+#p1{
+    z-index: 3;
+}
+
+#p2{
+    z-index: 2;    
+}
+
+#p3{
+    z-index: 1;  
+}
+
+
+#prev-btn,
+#next-btn{
+    font-size: 33px;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+MEDIA QUERIES for smaller devices: */
+
+@media (max-width: 768px) {
+    .center-text {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .book {
+        width: 200px; /* Smaller book width */
+        height: 350px; /* Smaller book height */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding on main container */
+    }
+
+    .front,
+    .back {
+        padding: 5px; /* Reduce padding on front and back */
+    }
+
+    .back-content p {
+        font-size: 5px; /* Smaller font size for readability */
+    }
+
+    #prev-btn,
+    #next-btn {
+        font-size: 10px; /* Smaller button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .center-text h1 {
+        font-size: 20px; /* Smaller heading size */
+        margin-bottom: 50px; /* Add some space after the heading */
+    }
+
+ 
+
+    .front,
+    .back {
+        padding: 5px; /* Minimal padding for smaller screens */
+    }
+
+    .back-content p {
+        font-size: 10px; /* Smaller font size for better fit */
+        line-height: 1.2; /* Better line spacing */
+    }
+
+    #prev-btn,
+    #next-btn {
+        font-size: 18px; /* Smaller button size for phones */
+        padding: 5px 10px; /* Add some padding for better tap area */
+    }
+
+    main {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center; /* Center elements horizontally */
+    }
+
+    #prev-btn {
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+
+    .front-content,
+    .back-content{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.back-content{
+    transform: rotateY(180deg);
+}
+
+
+#book {
+    transform: none !important;
+}
+#prevBtn, #nextBtn {
+    transform: none !important;
+}}
+</style>
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Gl✨w Encyclopedia</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end offcanvas-dark bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Options</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="about.html"><u>About</u></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="articls.html">Articls</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="Contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="otherprojects.html">Other Projects</a>
+                </li>
+          
+              </ul>
+              <!-- <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+<hr>
+<hr>
+<hr>
+
+<div class="center-text">
+<h1>Welcome to <b> `Gl✨w Encyclopedia (:`</b></h1> <br>
+</div>
+
+<!-- ----------------------- -->
+<main id="abook">
+<!-- previous button -->
+<button id="prev-btn"><i class="fa-solid fa-circle-left" ></i></button>
+
+<!-- the book code -->
+<div class="book" id="book">
+
+<div id="p1" class="papper">
+
+<div class="front">
+<div id="f1" class="front-content">
+<h2><b> `Gl✨w Encyclopedia(:`</b></h2>
+</div>
+</div>
+
+
+<div class="back">
+<div id="b1" class="back-content">
+<p> Welcome to <i><b>Glow Encyclopedia</b></i>, the right place to grow..</p> <br>
+<p> your ultimate resource for knowledge and discovery! This site stands out as one of the most important platforms available on Google, crafted to illuminate your understanding across a vast array of topics.</p>
+</div>
+</div>
+</div>
+
+<div id="p2" class="papper">
+
+    <div class="front">
+    <div id="f2" class="front-content">
+    <h3>Why <br> Choose <br><br> <b>`Gl✨w <br>  Encyclopedia`</b>  <br> ?</h3>
+    </div>
+    </div>
+    
+    
+    <div class="back">
+    <div id="b2" class="back-content">
+    <p>- Comprehensive Content</p> <br>
+    <p>- User-Friendly Interface</p> <br>
+    <p>- Regular Updates</p> <br>
+    <p>- Expert Contributions</p><br>
+    <p>- Community Engagement</p> <br>
+    </div>
+    </div>
+
+    </div>
+
+    
+    <div id="p3" class="papper">
+
+        <div class="front">
+        <div id="f3" class="front-content">
+        <h3>Join Us on This Journey!
+        </div>
+        </div>
+        
+        
+        <div class="back">
+        <div id="b3" class="back-content">
+        <p>We invite you to explore the world of knowledge with us at Glow Encyclopedia. Discover the brilliance of learning and let your curiosity shine!
+
+        </div>
+        </div>
+        </div>
+
+
+</div>
+
+<!-- next button -->
+<button id="next-btn"><i class="fa-solid fa-circle-right"></i></button>
+</main>
+<!-- ----------------------- -->
+
+
+
+
+
+<!-- <h1>Welcome to <b>Gl✨w Encyclopedia (:</b></h1> <br>
+<p class="dif"> Welcome to Glow Encyclopedia, the right place to grow.. your ultimate resource for knowledge and discovery! This site stands out as one of the most important platforms available on Google, crafted to illuminate your understanding across a vast array of topics.
+
+Why Choose Glow Encyclopedia?
+Comprehensive Content: Delve into an extensive collection of articles covering diverse subjects, including science, technology, history, art, and culture. Whether you're a student, a researcher, or simply curious, we have something for everyone!
+
+User-Friendly Interface: Enjoy seamless navigation through our well-organized sections. Our intuitive design ensures that you can find what you’re looking for quickly and easily.
+
+Interactive Learning Tools: Engage with our quizzes, flashcards, and interactive infographics that make learning not just informative but also fun!
+
+Regular Updates: Our commitment to providing the latest information means you’ll always find current and relevant content. We continuously update our database to reflect new discoveries and developments.
+
+Expert Contributions: Benefit from articles written by knowledgeable experts in various fields. Their insights and expertise add depth to the information we provide.
+
+Community Engagement: Join our community of learners! Participate in discussions, share your thoughts in the comments section, and connect with others who share your interests.
+
+Multilingual Support: Access content in multiple languages to cater to a global audience. We believe that knowledge should be accessible to everyone.
+
+Mobile-Friendly Design: Access Glow Encyclopedia on-the-go! Our site is optimized for mobile devices, allowing you to learn anytime, anywhere.
+
+Join Us on This Journey!
+We invite you to explore the world of knowledge with us at Glow Encyclopedia. Discover the brilliance of learning and let your curiosity shine!
+
+Feel free to customize any part of this message to better fit your vision for Glow Encyclopedia!
+</p>
+
+-->
+
+<hr>
+<hr>
+<hr>
+
+
+
+
+
+  <!-- <section class="readbg">
+<div class="imgg"></div>
+  </section> -->
+
+      <!-- <section class="black-background">
+        <div class="center-container">
+        <div class="listening-goal-container">
+      
+          <label for="listening-goal-input" class="listening-goal-label">Set Your Daily Reading Goal</label><br>
+          <input type="number" id="listening-goal-input" class="listening-goal-input" placeholder="Enter minutes">
+          <button id="start-btn" class="start-btn">Start</button>
+          <button id="pause-btn" class="pause-btn" disabled>Pause</button>
+          <button id="stop-btn" class="stop-btn" disabled>Stop</button>
+      
+          <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+          <div id="timer-display" class="timer-display">Time Left: 00:00</div>
+        </div>
+        </div>
+</section> -->
+        <!-- <script>
+          const listeningGoalInput = document.querySelector('.listening-goal-input');
+          const startBtn = document.querySelector('.start-btn');
+          const pauseBtn = document.querySelector('.pause-btn');
+          const stopBtn = document.querySelector('.stop-btn');
+          const progressBar = document.getElementById('progress-bar');
+          const timerDisplay = document.getElementById('timer-display');
+          let timerInterval;
+          let totalTimeInSeconds;
+          let elapsedTime = 0;
+          let isPaused = false;
+      
+          startBtn.addEventListener('click', function() {
+            const goalMinutes = parseInt(listeningGoalInput.value);
+            
+            if (isNaN(goalMinutes) || goalMinutes <= 0) {
+              alert("Please enter a valid goal.");
+              return;
+            }
+      
+            totalTimeInSeconds = goalMinutes * 60;
+            elapsedTime = 0;
+      
+            // Reset progress bar and timer display
+            progressBar.style.width = '0%';
+            timerDisplay.textContent = `You're on a roll! ${formatTime(totalTimeInSeconds)}`;
+      
+            // Enable pause and stop buttons
+            pauseBtn.disabled = false;
+            stopBtn.disabled = false;
+            
+            // Start timer
+            timerInterval = setInterval(function() {
+              if (!isPaused) {
+                elapsedTime++;
+                const progressPercent = (elapsedTime / totalTimeInSeconds) * 100;
+                progressBar.style.width = `${progressPercent}%`;
+                timerDisplay.textContent = `You're on a roll! ${formatTime(totalTimeInSeconds - elapsedTime)}`;
+      
+                if (elapsedTime >= totalTimeInSeconds) {
+                  clearInterval(timerInterval);
+                  alert("Goal reached! Well done.");
+                }
+              }
+            }, 1000);
+      
+            // Disable start button after starting
+            startBtn.disabled = true;
+          });
+      
+          pauseBtn.addEventListener('click', function() {
+            isPaused = !isPaused;
+            pauseBtn.textContent = isPaused ? 'Resume' : 'Pause';
+          });
+      
+          stopBtn.addEventListener('click', function() {
+            clearInterval(timerInterval);
+            elapsedTime = 0;
+            progressBar.style.width = '0%';
+            timerDisplay.textContent = `Try Again! 00:00`;
+      
+            // Disable pause and stop buttons after stopping
+            pauseBtn.disabled = true;
+            stopBtn.disabled = true;
+      
+            // Re-enable start button for a new session
+            startBtn.disabled = false;
+          });
+      
+          // Function to format time in mm:ss
+          function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+          }
+        </script> -->
+
+
+
+
+  <!-- Left Section: About the Brand -->
+    <!-- <div class="footer-section">
+      <h3>LitSphere</h3>
+      <p style="max-width: 70%;">
+        Revolutionizing the way text is experienced. Seamlessly transform words into lifelike speech for accessibility, productivity, and creativity.
+      </p>
+    </div> -->
+
+    <!-- Center Section: Quick Links -->
+    <!-- <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/library'>library</a></li>
+        <li><a href='/reader'>Reader</a></li>
+        <li><a href='/about'>About</a></li>
+      </ul>
+    </div> -->
+
+    <!-- Right Section: Contact & Socials -->
+    <!-- <div class="footer-section">
+      <h3>Contact Us</h3>
+      <a href="mailto:info.litshpere@gmail.com">info.litshpere@gmail.com</a>
+      <br><br>
+      <h3>Founder: Hala Abou Saad</h3>
+      <a href="mailto:halaabousaed1019@gmail.com">contact.halaabousaad@gmail.com</a>
+    </div>
+
+  </div> -->
+
+
+
+  
+  <!-- Footer Bottom Section -->
+  <!-- <div class="footer-bottom">
+    <p>&copy; 2025 LitSphere. All rights reserved. | Giving words a voice.</p>
+  </div>
+</footer> -->
+
+<!-- <style>
+
+
+  footer {
+    width:100%;
+    color: #f5f5f5;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    margin-left:5%;
+  }
+
+  .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  .footer-section p, a {
+    line-height: 1.6;
+    font-size: 14px;
+    color: #a8a8a8;
+    text-decoration: none;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #a8a8a8;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .footer-section ul li a:hover {
+    color: #00d1b2;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #00d1b2;
+    margin-top: 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    color: #a8a8a8;
+  }
+
+
+
+
+</style> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<footer class="footer">
+<p> CopyWrite &copy; 2025 All rights reserved | <b>Gl✨w Encyclopedia</b> </p>
+</footer>
+
+
+
+<!-- this code help us to use bootstrap: -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- this code help us to use fontawesome icons: -->
+<script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+
+<!-- this code to link the html page by script page -->
+<!-- <script src="about.js"></script> -->
+
+
+
+<!-- the js code of the page: -->
+ <script>
+const prevBtn= document.querySelector("#prev-btn")
+const nextBtn= document.querySelector("#next-btn")
+const book= document.querySelector("#book")
+
+const papper1= document.querySelector("#p1")
+const papper2= document.querySelector("#p2")
+const papper3= document.querySelector("#p3")
+
+//event listeners:
+prevBtn.addEventListener("click", goPrevPage) 
+nextBtn.addEventListener("click", goNextPage) 
+
+//business logic:
+let currentLocation=1;
+let numOfPages=3;
+let maxLocation= numOfPages +1;
+
+function openBook(){
+    book.style.transform= "translateX(50%)";
+    prevBtn.style.transform= "translateX(-180px)";
+    nextBtn.style.transform= "translateX(180px)";
+}
+
+function closeBook(isAtBeginning){
+    if(isAtBeginning){
+        book.style.transform= "translateX(0%)";
+        } else {      
+        book.style.transform= "translateX(100%)";
+    }
+    
+    prevBtn.style.transform= "translateX(0px)";
+    nextBtn.style.transform= "translateX(0px)";
+
+}
+
+function goNextPage(){
+    if(currentLocation < maxLocation){
+        switch(currentLocation){
+            case 1:
+                openBook();
+                papper1.classList.add("flipped");
+                papper1.style.zIndex=1;
+                break;
+
+            case 2:
+                papper2.classList.add("flipped");
+                papper2.style.zIndex=2;
+                break;
+
+            case 3:
+                papper3.classList.add("flipped");
+                papper3.style.zIndex=3;
+                closeBook();
+                break;
+            default:
+                throw new Error("unknown state")
+        }
+        currentLocation++;
+    } else if(currentLocation === numOfPages){
+        closeBook(false);	
+    }    
+
+}
+
+function goPrevPage(){
+    if( currentLocation > 1){
+        switch(currentLocation){
+
+            case 2:
+                closeBook();
+                papper1.classList.remove("flipped");
+                papper1.style.zIndex=3;
+                break;
+
+            case 3:
+                papper2.classList.remove("flipped");
+                papper2.style.zIndex=2;
+                break;
+
+            case 4:
+                openBook();
+                papper3.classList.remove("flipped");
+                papper3.style.zIndex=1;
+                break;
+
+            default:
+                throw new Error("unknown state");
+        }
+    }
+    currentLocation--;
+
+}
+ </script>
+
+</body>
+</html>

@@ -24,233 +24,37 @@
 
 <!-- add style to about page  -->
 <style>
-.center-text {
+    /* create root for css variables:  */
+:root{
+  --firstfont:  Arial, sans-serif;
+  --secondfont: "Josefin Sans";
+  --thirdfont: "Agu Display";
+  --firstcolor: #e0dfdb;
+  --secondcolor: #CEDEBD;
+  --thirdcolor: #788d5f;
+  --fourthcolor: #353d2f;
+  --fifthcolor: #0fa50f;
+}
+
+    .center-text {
     display: flex;
+    text-align: center;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
     height: 20vh; /* Takes up full viewport height */
 }
 
-.book{
-position: relative;
-width: 350px;
-height: 500px;
-transition: transform 0.5s;
-}
-
-main {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-
-
-	height :100vh ; 
-	background-size:auto auto;
-	margin-bottom:none ;
-	margin-top:none ;
-	margin-right:none ;
-}
-
-
-.papper{
-position: absolute;
-width: 100%;
-height:100%;
-left: 0;
-top: 0;
-perspective: 1500px;
-}
-
-.front,
-.back{
-background-color: var(--firstcolor);
-position: absolute;
-width: 100%;
-height:100%;
-left: 0;
-top: 0;
-transform-origin: left;
-transition: transform 0.5s;
-}
-
-
-.front{
-z-index: 1;
-backface-visibility: hidden;
-border-left: 3px solid var(--secondcolor);
-padding: 20px; /* Adds space around content */
-}
-
-.back{
-z-index: 0;
-display: flexbox;
-padding: 20px; /* Adds space around content */
-}
-
-.flipped .front,
-.flipped .back{
-    transform: rotateY(-180deg);
-}
-
-.back-content{
-    transform: rotateY(180deg);
-}
-
-.front-content, h1 {
-align-items: center;
-justify-content: center;
-text-align: center;
-}
-
-.front-content,
-.back-content{
-width: 100%;
-height:100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-
-.back-content p {
-    font-size: 1.2em; /* Larger font size for readability */
-    margin-bottom: 10px; /* Spacing between paragraphs */
-}
-
-button{
-border: none;
-background-color: transparent;
-cursor: pointer;
-margin: 10px;
-transition: transform 0.5s;
-color: var(--fourthcolor);
-}
-
-button:focus{
-    outline: none;
-}
-
-
-button:hover i{
-    color: var(--thirdcolor);
-}
-
-i{
-    font-size: auto;
-}
-
-/* pappers control  */
-#p1{
-    z-index: 3;
-}
-
-#p2{
-    z-index: 2;    
-}
-
-#p3{
-    z-index: 1;  
-}
-
-
-#prev-btn,
-#next-btn{
-    font-size: 33px;
-}
-
-
-
-/* ----------------------------------------------------------------------------------------------------
-MEDIA QUERIES for smaller devices: */
-
-@media (max-width: 768px) {
-    .center-text {
-        height: auto; /* Adjust height for smaller screens */
-        padding: 20px; /* Add padding for better spacing */
+    .card{
+        margin: 30px;
+        text-align: center;
+        background-image: url("green.gif");
     }
-
-    .book {
-        width: 200px; /* Smaller book width */
-        height: 350px; /* Smaller book height */
+    p{
+        text-align: center;
     }
-
-    main {
-        padding: 10px; /* Reduce padding on main container */
-    }
-
-    .front,
-    .back {
-        padding: 5px; /* Reduce padding on front and back */
-    }
-
-    .back-content p {
-        font-size: 5px; /* Smaller font size for readability */
-    }
-
-    #prev-btn,
-    #next-btn {
-        font-size: 10px; /* Smaller button size */
-    }
-}
-
-@media (max-width: 480px) {
-    .center-text h1 {
-        font-size: 20px; /* Smaller heading size */
-        margin-bottom: 50px; /* Add some space after the heading */
-    }
-
- 
-
-    .front,
-    .back {
-        padding: 5px; /* Minimal padding for smaller screens */
-    }
-
-    .back-content p {
-        font-size: 10px; /* Smaller font size for better fit */
-        line-height: 1.2; /* Better line spacing */
-    }
-
-    #prev-btn,
-    #next-btn {
-        font-size: 18px; /* Smaller button size for phones */
-        padding: 5px 10px; /* Add some padding for better tap area */
-    }
-
-    main {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-        align-items: center; /* Center elements horizontally */
-    }
-
-    #prev-btn {
-        margin-bottom: 10px; /* Add space between buttons */
-    }
-
-    .front-content,
-    .back-content{
-    width: 100%;
-    height:100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-
-.back-content{
-    transform: rotateY(180deg);
-}
-
-
-#book {
-    transform: none !important;
-}
-#prevBtn, #nextBtn {
-    transform: none !important;
-}}
 </style>
+
 </head>
-
-
 
 <body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -270,10 +74,10 @@ MEDIA QUERIES for smaller devices: */
                   <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                  <a class="nav-link active" aria-current="page" href="about.html"><u>About</u></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="articls.html">Articls</a>
+                  <a class="nav-link active" aria-current="page" href="library.html">Library</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="Contact.html">Contact Us</a>
@@ -281,12 +85,7 @@ MEDIA QUERIES for smaller devices: */
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="otherprojects.html">Other Projects</a>
                 </li>
-          
               </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
             </div>
           </div>
         </div>
@@ -298,80 +97,66 @@ MEDIA QUERIES for smaller devices: */
 <hr>
 
 <div class="center-text">
-<h1>Welcome to <b> `Gl✨w Encyclopedia (:`</b></h1> <br>
+<h1>Welcome to <br><b> `Gl✨w Encyclopedia (:`</b></h1>
 </div>
+<p>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</p>
 
-<!-- ----------------------- -->
-<main id="abook">
-<!-- previous button -->
-<button id="prev-btn"><i class="fa-solid fa-circle-left" ></i></button>
-
-<!-- the book code -->
-<div class="book" id="book">
-
-<div id="p1" class="papper">
-
-<div class="front">
-<div id="f1" class="front-content">
-<h2><b> `Gl✨w Encyclopedia(:`</b></h2>
-</div>
-</div>
-
-
-<div class="back">
-<div id="b1" class="back-content">
-<p> Welcome to <i><b>Glow Encyclopedia</b></i>, the right place to grow..</p> <br>
-<p> your ultimate resource for knowledge and discovery! This site stands out as one of the most important platforms available on Google, crafted to illuminate your understanding across a vast array of topics.</p>
-</div>
-</div>
-</div>
-
-<div id="p2" class="papper">
-
-    <div class="front">
-    <div id="f2" class="front-content">
-    <h3>Why <br> Choose <br><br> <b>`Gl✨w <br>  Encyclopedia`</b>  <br> ?</h3>
-    </div>
-    </div>
-    
-    
-    <div class="back">
-    <div id="b2" class="back-content">
-    <p>- Comprehensive Content</p> <br>
-    <p>- User-Friendly Interface</p> <br>
-    <p>- Regular Updates</p> <br>
-    <p>- Expert Contributions</p><br>
-    <p>- Community Engagement</p> <br>
-    </div>
-    </div>
-
-    </div>
-
-    
-    <div id="p3" class="papper">
-
-        <div class="front">
-        <div id="f3" class="front-content">
-        <h3>Join Us on This Journey!
+<div class="row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body"><br>
+          <h5 class="card-title"><b>``the right place to grow``</b></h5>
+          <p class="card-text">your ultimate resource for knowledge and discovery! </p><br>
         </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body"><br>
+          <h5 class="card-title"><b>``Reliable Sources``</b></h5>
+          <p class="card-text">Our encyclopedia provide reliable sources that can be cited in research papers.</p><br>
         </div>
-        
-        
-        <div class="back">
-        <div id="b3" class="back-content">
-        <p>We invite you to explore the world of knowledge with us at Glow Encyclopedia. Discover the brilliance of learning and let your curiosity shine!
+      </div>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body"><br>
+          <h5 class="card-title"><b>``Easy Navigation``</b></h5>
+          <p class="card-text">The site features a well-organized design, making it easy for users to find what they’re looking for quickly.</p><br>
         </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body"><br>
+          <h5 class="card-title"><b>``Mobile-Friendly Design``</b></h5>
+          <p class="card-text">The site features is optimized for mobile devices, allowing users to learn anytime, anywhere.</p><br>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body"><br>
+          <h5 class="card-title"><b>``Quick Communication``</b></h5>
+          <p class="card-text">You can cantact us by easy and fast way.</p><br>
         </div>
-
-
-</div>
-
-<!-- next button -->
-<button id="next-btn"><i class="fa-solid fa-circle-right"></i></button>
-</main>
-<!-- ----------------------- -->
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body"><br>
+          <h5 class="card-title"><b>``Share Knowledge``</b></h5>
+          <p class="card-text">Share users articles and insights on social media platforms.</p><br>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -405,12 +190,7 @@ Feel free to customize any part of this message to better fit your vision for Gl
 
 -->
 
-<hr>
-<hr>
-<hr>
-
-
-<br>
+<hr><br><br>
 
 <footer class="footer">
 <p> CopyWrite &copy; 2025 All rights reserved | <b>Gl✨w Encyclopedia</b> </p>
@@ -424,106 +204,9 @@ Feel free to customize any part of this message to better fit your vision for Gl
 <!-- this code help us to use fontawesome icons: -->
 <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
 
-<!-- this code to link the html page by script page -->
-<!-- <script src="about.js"></script> -->
-
-
 
 <!-- the js code of the page: -->
- <script>
-const prevBtn= document.querySelector("#prev-btn")
-const nextBtn= document.querySelector("#next-btn")
-const book= document.querySelector("#book")
-
-const papper1= document.querySelector("#p1")
-const papper2= document.querySelector("#p2")
-const papper3= document.querySelector("#p3")
-
-//event listeners:
-prevBtn.addEventListener("click", goPrevPage) 
-nextBtn.addEventListener("click", goNextPage) 
-
-//business logic:
-let currentLocation=1;
-let numOfPages=3;
-let maxLocation= numOfPages +1;
-
-function openBook(){
-    book.style.transform= "translateX(50%)";
-    prevBtn.style.transform= "translateX(-180px)";
-    nextBtn.style.transform= "translateX(180px)";
-}
-
-function closeBook(isAtBeginning){
-    if(isAtBeginning){
-        book.style.transform= "translateX(0%)";
-        } else {      
-        book.style.transform= "translateX(100%)";
-    }
-    
-    prevBtn.style.transform= "translateX(0px)";
-    nextBtn.style.transform= "translateX(0px)";
-
-}
-
-function goNextPage(){
-    if(currentLocation < maxLocation){
-        switch(currentLocation){
-            case 1:
-                openBook();
-                papper1.classList.add("flipped");
-                papper1.style.zIndex=1;
-                break;
-
-            case 2:
-                papper2.classList.add("flipped");
-                papper2.style.zIndex=2;
-                break;
-
-            case 3:
-                papper3.classList.add("flipped");
-                papper3.style.zIndex=3;
-                closeBook();
-                break;
-            default:
-                throw new Error("unknown state")
-        }
-        currentLocation++;
-    } else if(currentLocation === numOfPages){
-        closeBook(false);	
-    }    
-
-}
-
-function goPrevPage(){
-    if( currentLocation > 1){
-        switch(currentLocation){
-
-            case 2:
-                closeBook();
-                papper1.classList.remove("flipped");
-                papper1.style.zIndex=3;
-                break;
-
-            case 3:
-                papper2.classList.remove("flipped");
-                papper2.style.zIndex=2;
-                break;
-
-            case 4:
-                openBook();
-                papper3.classList.remove("flipped");
-                papper3.style.zIndex=1;
-                break;
-
-            default:
-                throw new Error("unknown state");
-        }
-    }
-    currentLocation--;
-
-}
- </script>
+<script></script>
 
 </body>
 </html>
