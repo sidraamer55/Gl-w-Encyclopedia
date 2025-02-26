@@ -19,38 +19,341 @@
  
      <!-- linked html page with style page: -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- add style to contact page  -->
+    <style>
+.btn{
+  color:  #808080;
+}
+
+
+/*contact*/
+.contact-info a{
+  color: #ffffff ;
+}
+#contact{
+  padding: 100px 0;
+  background: #353D2F;
+}
+#contact .container1{
+  max-width: 900px;
+}
+#contact .contact-content{
+  display: flex;
+  justify-content:space-evenly ;
+  align-items: center;
+}
+#contact .contact-content .contact-info div {
+  margin: 30px;
+  line-height: 1.7;
+}
+#contact .contact-content .contact-info h3{
+  font-size: 28px;
+  color: #0fa50f;
+  margin-bottom: 10px;
+
+}
+#contact .contact-content .contact-info p{
+  color:#f5f5f5;
+
+}
+#contact .contact-content .contact-info i{
+  margin-right: 5px;
+
+}
+form{
+  width: 50%;
+
+}
+form input{
+  display: block;
+  width: 100%;
+  padding: 20px 15px ;
+  margin: 20px 0;
+}
+#contact .btn {
+  background-color:#047a04;
+  color: white;
+  font-size: 16px;
+  padding: 3px 5px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  
+}
+#contact .btn:hover{
+  background-color: transparent;
+  border-color: #e7fce6;
+  color: #e7fce6;
+}
+
+.fa-brands{
+  padding: 1px 5px ;
+  margin: 20px 0;
+}
+
+.fa-solid{
+  padding: 3px 5px ;
+ }
+
+.fa-regular{
+  padding: 5px 5px ;
+
+}
+
+.contact {
+  font-family: Arial, sans-serif; /* Sets a clean, modern font */
+  font-size: 16px; /* Sets a comfortable font size */
+  color: #3f5e43; /* Dark gray text color for readability */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  padding: 15px; /* Adds space inside the paragraph */
+  border: 1px solid #ddd; /* Light border for definition */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(38, 71, 40, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto; /* Adds space above and below the paragraph and centers it */
+  width: 100%; /* Sets a width for the paragraph */
+  text-align: center; /* Centers the text inside the paragraph */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .contact-content {
+      flex-direction: column; /* Stack contact info and form vertically */
+      align-items: center; /* Center items */
+  }
+
+  .contact-info {
+      margin-right: 0; /* Remove right margin on smaller screens */
+      margin-bottom: 20px; /* Add space below contact info */
+  }
+
+  form {
+      width: 100%; /* Full width on mobile */
+  }
+
+  form input {
+      width: 100%; /* Full width for input fields */
+  }
+
+  form button {
+      width: 100%; /* Full width for button */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+      font-size: 1rem; /* Smaller font size for very small screens */
+  }
+
+  form input {
+      padding: 8px; /* Smaller padding for input fields */
+  }
+
+  form button {
+      padding: 8px; /* Smaller padding for button */
+  }
+}
+
+.btn:hover{
+    background-color: var(--fifthcolor);
+}
+
+  /*contact*/
+.contact-info a{
+    color: var(--firstcolor) ;
+}
+  
+#contact{
+    padding: 100px 0;
+    background: var(--fourthcolor);
+}
+
+#contact .container1{
+    max-width: 900px;
+}
+
+#contact .contact-content{
+    display: flex;
+    justify-content:space-evenly ;
+    align-items: center;
+}
+
+#contact .contact-content .contact-info div {
+    margin: 30px;
+    line-height: 1.7;
+}
+
+#contact .contact-content .contact-info h3{
+    font-size: 28px;
+    color: var(--fifthcolor);
+    margin-bottom: 10px;
+  
+}
+
+#contact .contact-content .contact-info p{
+    color: var(--firstcolor);
+  
+}
+
+#contact .contact-content .contact-info i{
+    margin-right: 5px;
+}
+
+#contact .btn {
+    background-color:var(--fifthcolor);
+    color: var(--firstcolor);
+    font-size: 16px;
+    padding: 3px 5px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    
+}
+
+#contact .btn:hover{
+    background-color: transparent;
+    border-color: var(--secondcolor);
+    color: var(--firstcolor);
+}
+  
+.fa-brands{
+    padding: 1px 5px ;
+    margin: 20px 0;
+}
+  
+.fa-solid{
+    padding: 3px 5px ;
+  }
+  
+.fa-regular{
+    padding: 5px 5px ;
+}
+  
+.contact {
+    font-family: var(--secondfont);
+    font-size: 16px; /* Sets a comfortable font size */
+    color: var(--fourthcolor); /* Dark gray text color for readability */
+    background-color: whitesmoke; /* Light background color for contrast */
+    padding: 15px; /* Adds space inside the paragraph */
+    border: 1px solid var(--firstcolor); /* Light border for definition */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(12, 69, 16, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Adds space above and below the paragraph and centers it */
+    width: 100%; /* Sets a width for the paragraph */
+    text-align: center; /* Centers the text inside the paragraph */
+}
+  
+.contact:hover{
+    transform: scale(1.1);
+    box-shadow: 1 0.5 1 1 #353d2f;
+    font-family: var(--thirdfont);
+    background-color: var(--firstcolor);
+}
+
+.footer {
+    background-color: var(--fourthcolor);
+    color: var(--firstcolor);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+
+/* ==========================
+
+   MEDIA QUERIES
+
+========================== */
+
+/* Tablets and Larger Phones */
+@media (max-width: 768px) {
+  #contact .contact-content {
+      flex-direction: column; /* Stack contact info and form vertically */
+      align-items: stretch; /* Stretch items to full width */
+  }
+
+  .contact-info,
+  .contact-form {
+      width: 100%; /* Full width on mobile */
+      margin-bottom: 20px;  /* Add some space */
+  }
+}
+
+/* Smaller Mobile Devices */
+@media (max-width: 480px) {
+  .contact-intro {
+      font-size: 1rem; /* Smaller font size */
+      padding: 15px; /* Reduced padding */
+  }
+
+  form input,
+  form textarea {
+      padding: 10px; /* Smaller padding */
+      font-size: 0.9rem; /* Smaller font size */
+  }
+
+  #contact .contact-info h3 {
+      font-size: 22px; /* Adjusted font size for smaller screens */
+  }
+
+  .fa-brands {
+      font-size: 1.2rem; /* Adjusted size for smaller screens */
+  }
+
+  .btn {
+      font-size: 14px; /* Smaller font size */
+      padding: 8px 16px; /* Smaller padding */
+  }
+}
+    </style>
   </head>
+
 <body>
-
-
-
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Gl✨w Encyclopedia</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> 
-              </button>
-          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="index.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  options
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item" href="index.html">Home</a></li>
-                  <li><a class="dropdown-item" href="about.html">About</a></li>
-                  <li><a class="dropdown-item" href="articls.html">Articls</a></li>
-                  <li><a class="dropdown-item" href="catogries.html">Catogries</a></li>
-                  <li><a class="dropdown-item active" href="Contact.html">Contact Us</a></li>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Gl✨w Encyclopedia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end offcanvas-dark bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Options</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="articls.html">Articls</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Contact.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="otherprojects.html">Other Projects</a>
+                  </li>
+            
                 </ul>
-              </li>
-            </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
-      
+        </nav>
 
+      <hr>
+      <hr>
       <hr>
 
       
@@ -61,43 +364,39 @@
             <div class="contact-content">
                 <div class="contact-info">
            <div>
-              <h3>ADDRESS </h3>
-              <p><i class="fa-solid fa-location-dot"></i> Free Syria / Homs / Jouseah</p>
-              <p><i class="fa-solid fa-phone"></i> +96176569499</p>
-              <p><i class="fa-regular fa-envelope"></i> sidraamer125@gmail.com</p>
+              <h3>Contact Us </h3>
+              <p><i class="fa-solid fa-location-dot"></i>Syria / Al-Quoser / Jouseah</p>
+              <p><i class="fa-solid fa-phone"></i>Phone : +96176569499</p>
+              <p><i class="fa-regular fa-envelope"></i>sidraamer125@gmail.com</p>
           </div>
-          <hr>
+          <hr style="color: #e7fce6;"><br>
           <div>
               <h3>FOLLOW US</h3>
-              <a href="https://www.facebook.com/sador.amer.9" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://wa.me/message/PUVXKADRZKLRP1 " target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-              <a href="https://t.me/Sido_am" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+              <a href="https://www.facebook.com/sador.amer.9" target="_blank"><i class="fa-brands fa-facebook" style="font-size: 20px;"></i></a>
+              <a href="https://wa.me/message/PUVXKADRZKLRP1 " target="_blank"><i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i></a>
+              <a href="https://t.me/Sido_am" target="_blank"><i class="fa-brands fa-telegram" style="font-size: 20px;"></i></a>
           </div>
       </div>
-      <!-- </div>
-      </div> -->
 
-
-
-
-
-  <hr>
-  <div class="mt-4">
-      <label for="rateInput" class="form-label">Add a Rate (Max 400 Characters):</label>
-      <input type="text" class="form-control" id="rateInput" placeholder="Enter your rate..">
-      <button id="addRateBtn" class="btn btn-secondary mt-2">Add Rate</button>
-      <button id="clearRatesBtn" class="btn btn-danger mt-2">Clear All Rates</button>
-      <ul id="rateList" class="list-group mt-3"></ul>
-  </div>
-  
-
-</section>
+      <!-- <div class="col-md-6 contact-form"> -->
+        
+        <form>
+          <h3 style="color: #ddd;"><u>Send us a Message:</u></h3>
+          <p style="font-size: 15px; color: #808080;">'A bogus message example.'</p>
+          <input type="text" name="Name" id="Name" placeholder="Full Name" required>
+          <input type="email" name="email" id="email" placeholder="Email Address" required>
+          <input type="text" name="Subject" id="Subject" placeholder="Your Message.." required>
+          <button type="submit" class="btn">Send Message</button>
+          </form>
+          
+        
+      
+      </div>
+      </div>
+      </section>
    
       <hr>
-      <hr>   
       <hr>
-      
-      
       <br>
       
       <footer class="footer">
@@ -108,6 +407,8 @@
 
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="contact.js"></script>
+      <!-- <script src="contact.js"></script> -->
+
+    
     </body>
 </html>

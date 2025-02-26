@@ -1,0 +1,406 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <!-- font font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!--second google font: -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rouge+Script&family=Stalemate&display=swap" rel="stylesheet">
+ 
+     <!--third google font: -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rouge+Script&family=Stalemate&display=swap" rel="stylesheet">
+ 
+     <!-- linked html page with style page: -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    /* Slider Container */
+    .slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background: white;
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+    /* Slider Track */
+    .slider-track {
+        display: flex;
+        animation: scroll 40s linear infinite; /* Increased duration for slower scroll */
+        width: max-content; /* Ensures track size grows with content */
+    }
+    /* Individual Slides */
+    .slide , .slide1 {
+        width: 500px; /* Slide width */
+        height: 200px; /* Slide height */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: white;
+        background-position: center; /* Center the background image */
+        background-size: cover; /* Ensure background images cover the slide area */
+        background-repeat: no-repeat; /* Prevent background image repetition */
+        position: relative; /* Create a stacking context for the overlay */
+        margin-right: 20px;
+    }
+    
+    /* Overlay for Text Clarity */
+    .slide::after , .slide1::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+        z-index: 1; /* Place it above the background, but behind the text */
+    }
+    
+    
+    /* Text Styles */
+    .text {
+        position: relative;
+        z-index: 2; /* Ensure text stays above the overlay */
+    }
+    
+    .slide .slide1 .text h2 {
+        color: var(--white);
+        font-size: 1.5rem;
+        padding: 10px 10px;
+        word-wrap: break-word; /* Allow long words to break and wrap */
+        overflow-wrap: break-word; /* Modern equivalent of word-wrap */
+        white-space: normal; /* Allow wrapping, no single-line enforcement */
+    
+    }
+    
+    /* Background for Each Slide */
+    .slide:nth-child(1) {
+        background-image: url('bg1.jpg'); /* Image for the first slide */
+    }
+    
+    .slide:nth-child(2) {
+        background-image: url('slide2.webp'); /* Image for the second slide */
+    }
+    
+    .slide:nth-child(3) {
+        background-image: url('slide3.webp'); /* Image for the third slide */
+    }
+    
+    .slide:nth-child(4) {
+        background-image: url('slide4.webp'); /* Image for the fourth slide */
+    }
+    
+    .slide:nth-child(5) {
+        background-image: url('grip.png'); /* Image for the fifth slide */
+    }
+    .slide:nth-child(6) {
+        background-image: url('grip.png'); /* Image for the fifth slide */
+    }
+
+
+     /* Background for Each Slide1 */
+     .slide1:nth-child(1) {
+        background-image: url('bg2.jpg'); /* Image for the first slide */
+    }
+    
+    .slide1:nth-child(2) {
+        background-image: url('bg3.jpg'); /* Image for the second slide */
+    }
+    
+    .slide1:nth-child(3) {
+        background-image: url('slide3.webp'); /* Image for the third slide */
+    }
+    
+    .slide1:nth-child(4) {
+        background-image: url('slide4.webp'); /* Image for the fourth slide */
+    }
+    
+    .slide1:nth-child(5) {
+        background-image: url('grip.png'); /* Image for the fifth slide */
+    }
+    .slide1:nth-child(6) {
+        background-image: url('grip.png'); /* Image for the fifth slide */
+    }
+    
+  
+    
+    .text h2 {
+        color: var(--white);
+        font-size: 28px;
+        padding: 10px 10px;
+    }
+    /* Animation Keyframes */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+    
+    button, a{
+        text-decoration: none;
+        color: white;
+        background-color: green;
+        border-radius: 5px;
+        font-size: 25px;
+        box-shadow: none;
+    }
+    button:hover , a:hover{
+        transform: scale(1.05s);
+    }
+    </style>
+
+  </head>
+<body>
+
+
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Gl✨w Encyclopedia</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end offcanvas-dark bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Options</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="articls.html">Articls</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="Contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="otherprojects.html">Other Projects</a>
+                </li>
+          
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+
+      <hr>
+      <hr>
+      <hr>
+
+
+
+      <section>
+        <div class="slider">
+            <div class="slider-track" id="slider-track">
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <div class="text">
+                      <h1>DesignJourney Project</h1>
+                        <br><br>
+                        <button> <a href="https://designjourney.netlify.app/" class="normal">webSite</a></button>
+                        <button> <a href="https://github.com/sidraamer55/Design-Journey.git" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+        
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <div class="text">
+                        <h1>Portfolio Project</h1>
+                        <br><br>
+                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="https://github.com/sidraamer55/My-Portfolio.git" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+    
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <div class="text">
+                        <h1>ThoughtPad Project</h1>
+                        <br><br>
+                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="https://github.com/sidraamer55/Thought-Pad.git" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+    
+                <!-- Slide 4 -->
+                <div class="slide">
+                    <div class="text">
+                        <h1>Budget Project</h1>
+                        <br><br>
+                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="shttps://github.com/sidraamer55/myBudget.git" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+    
+                <!-- Slide 5 -->
+                <div class="slide">
+                    <div class="text">
+                        <h1>Grip Project</h1>
+                        <br><br>
+                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="https://github.com/sidraamer55/grip.git" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="slide">
+                  <div class="text">
+                      <h1>Weather Project</h1>
+                      <br><br>
+                      <button> <a href="https://ouriweather.netlify.app/" class="normal">webSite</a></button>
+                      <button> <a href="https://github.com/sidraamer55/weather_app-main.gitv" class="normal">gitHub</a></button>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <br><hr><br>
+
+
+      <section>
+        <div class="slider">
+            <div class="slider-track" id="slider-track">
+                <!-- Slide 1 -->
+                <div class="slide1">
+                    <div class="text">
+                      <h1>stopwatch Project</h1>
+                        <br><br>
+                        <button> <a href="https://stopwatchmain.netlify.app/" class="normal">webSite</a></button>
+                        <button> <a href="https://github.com/sidraamer55/stopwatch-main.git" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+        
+                <!-- Slide 2 -->
+                <div class="slide1">
+                    <div class="text">
+                        <h1>ToDo List Project</h1>
+                        <br><br>
+                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="https://github.com/sidraamer55/todo_list.git" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+    
+                <!-- Slide 3 -->
+                <div class="slide1">
+                    <div class="text">
+                        <h1>Calculater Project</h1>
+                        <br><br>
+                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="shop.html" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+    
+                <!-- Slide 4 -->
+                <div class="slide1">
+                    <div class="text">
+                        <h1>Robotics Project</h1>
+                        <br><br>
+                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="shop.html" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+    
+                <!-- Slide 5 -->
+                <div class="slide1">
+                    <div class="text">
+                        <h1>Country Project</h1>
+                        <br><br>
+                        <button> <a href="shop.html" class="normal">webSite</a></button>
+                        <button> <a href="shop.html" class="normal">gitHub</a></button>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="slide1">
+                  <div class="text">
+                      <h1>Encyclopedia Project</h1>
+                      <br><br>
+                      <button> <a href="shop.html" class="normal">webSite</a></button>
+                      <button> <a href="shop.html" class="normal">gitHub</a></button>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+      <hr>
+      <hr>   
+      <hr>
+      
+      
+      <br>
+      
+      <footer class="footer">
+       <p> CopyWrite &copy; 2025 All rights reserved | <b>Gl✨w Encyclopedia</b> </p>
+      </footer>
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        const sliderTrack = document.getElementById('slider-track');
+        
+          if (sliderTrack) {
+              function duplicateSlides() {
+                  const slides = Array.from(sliderTrack.children);
+                  slides.forEach(slide => {
+                      const clone = slide.cloneNode(true);
+          
+                      // Copy the background image if it's set via CSS
+                      const backgroundImage = window.getComputedStyle(slide).backgroundImage;
+                      if (backgroundImage !== 'none') {
+                          clone.style.backgroundImage = backgroundImage;
+                      }
+          
+                      sliderTrack.appendChild(clone);
+
+
+
+
+
+
+                      const backgroundImage1 = window.getComputedStyle(slide1).backgroundImage1;
+                      if (backgroundImage1 !== 'none') {
+                          clone.style.backgroundImage1 = backgroundImage1;
+                      }
+                      sliderTrack.appendChild(clone);
+              
+                  });
+
+          
+              duplicateSlides();
+          }}
+          </script>
+
+    </body>
+</html>
+
+

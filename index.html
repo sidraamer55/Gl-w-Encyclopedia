@@ -20,42 +20,414 @@
 
     <!-- linked html page with style page: -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- add style to about page  -->
+     <style>
+      .h1, .h3{
+        text-align: center;
+      }
+
+
+
+
+
+     </style>
   </head>
+
 <body>
-
-
-
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Gl✨w Encyclopedia</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> 
-              </button>
-          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="index.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  options
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item active" href="index.html">Home</a></li>
-                  <li><a class="dropdown-item" href="about.html">About</a></li>
-                  <li><a class="dropdown-item" href="articls.html">Articls</a></li>
-                  <li><a class="dropdown-item" href="catogries.html">Catogries</a></li>
-                  <li><a class="dropdown-item" href="Contact.html">Contact Us</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Gl✨w Encyclopedia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end offcanvas-dark bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Options</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-      </nav>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="articls.html">Articls</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="otherprojects.html">Other Projects</a>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
       
 
       <hr>
-      <hr>
-      <hr>
-      <audio id="sound"></audio>
-      <div class="container">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="bg1.jpg" class="d-block w-100" alt="first slide">
+          </div>
+          <div class="carousel-item">
+            <img src="bg2.jpg" class="d-block w-100" alt="second slide">
+          </div>
+          <div class="carousel-item">
+            <img src="bg3.jpg" class="d-block w-100" alt="third slide">
+          </div>
+        </div>
+        <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <hr><br><br><br>
+
+      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-success" style="width: -25%"></div>
+      </div>
+
+      <section>
+        <article class="rt">
+          <br><br><br>
+          <h1 class="h1 pb-1" style="padding: 10px;">Hello! My name is <b><u><a class="def" href="sido.mp4">Sidra Amer</a></u></b>.</h1><br>
+          <h4 class="h3">We’re about to start something exciting.
+            Welcome to <b>Glow Encyclopedia!</b> We’re glad you have decided to visit us.
+            We want to make your onboarding experience free of worry. </h4> <br><br>
+            <div class="d-flex justify-content-center">
+              <div class="spinner-grow" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div class="spinner-grow" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div class="spinner-grow" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              </div>
+              <br><br><br>
+        </article>
+      </section>
+      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-success" style="width: -25%"></div>
+      </div>
+
+      <br><br><br><hr><hr><br>
+      <article>
+        <h1 class="h1 pb-1" style="padding: 10px;"><u>What do we offer to you?</u></h1><br>
+        <p class="box">We will offer you many resources, such as a dictionary and a list of recommended books. Additionally, we can provide guidance on how to manage your time effectively for reading. You are also welcome to contact us anytime you need assistance. </p>
+      </article>
+      
+      <br><br>
+      
+
+  
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btnn btn-outline-success" type="button"><a href="#container">Dictionary</a></button>
+        <button class="btnn btn-outline-success" type="button"><a href="#nottes">Notes</a></button>
+        <button class="btnn btn-outline-success" type="button"><a href="books.html">Books</a></button>
+      </div> <br><hr><hr>
+      
+
+ <style>
+
+ :root{
+     --firstfont:  Arial, sans-serif;
+     --secondfont: "Josefin Sans";
+     --thirdfont: "Agu Display";
+     --firstcolor: #e0dfdb;
+     --secondcolor: #CEDEBD;
+     --thirdcolor: #788d5f;
+     --fourthcolor: #353d2f;
+     --fifthcolor: #0fa50f;
+     }
+
+
+.rt{
+  border: 2px solid black; /* Border width, style, and color */
+  padding: 5px;
+  background-image: url("giphy.gif");
+  color: var(--firstcolor);
+}
+
+.def{
+      color: var(--firstcolor);
+     }
+
+.h5{
+       color: var(--firstcolor);
+       text-shadow: 1px 1px 2px #000000;
+     }
+
+ .des{
+       color: var(--firstcolor);
+       text-shadow: 1px 1px 2px #000000;
+       /* text-shadow: 0 0 3px #FF0000; */
+       background-color: var(--thirdcolor);
+     }
+
+.btnn{
+     border: 0;
+     background-color: var(--fourthcolor);
+     border-radius: 50px;
+     padding: 10px 60px;
+     cursor: pointer;
+  }
+
+
+.btnn:hover{
+     transform: scale(1.05);
+     background-image: url("green.gif");
+   }
+
+a{
+     text-decoration: none;
+     color: var(--firstcolor);
+   }
+
+.box{
+     box-shadow: 1px 1px 1px --secondcolor;
+     background-color: var(--firstcolor);
+     margin: 20px;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     background-image: url("green.gif");
+   }
+
+   .container{
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--firstcolor);
+  box-shadow: 0 20px 40px rgba(53, 61, 47, 0.1);
+ }
+
+
+/* ----------------------------------------------------------------------------------------------------
+searching box styling:  */
+
+.search-box{
+    display: flex;
+    margin-bottom: 20px;
+ }
+
+ .search-box input[type="text"]{
+  flex:1;
+  padding: 10px;
+  border: 0.5px solid var(--secondcolor);
+  border-radius: 5px;
+  font-size: 1rem;
+ }
+
+ .search-box button{
+    padding: 10px 20px;
+    width: 25%;
+    background-color: var(--fourthcolor);
+    border: none;
+    color: var(--firstcolor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+ }
+
+ .search-box button:hover{
+/* background-color: #3f5e43; */
+background-image: url("green.gif");
+color: var(--firstcolor);
+text-decoration: solid;
+ }
+
+
+ /* ----------------------------------------------------------------------------------------------------
+result styling:  */
+
+ .result{
+    padding: 20px;
+    border: 1px solid --fourthcolor;
+    border-radius: 5px;
+ }
+
+ .result h3{
+    font-size: 30px;
+    color: var(--fourthcolor);
+ }
+
+ .result .word{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 30px;
+ }
+
+ .word{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+ }
+
+.word h3{
+  font-size: 1.5rem;
+}
+
+.word button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--fourthcolor);
+  transition: color 0.3s;
+}
+
+.word button:hover{
+  color: var(--thirdcolor) ;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------
+media queries styling:  */
+
+@media (max-width: 768px) {
+    #container {
+        padding: 10px;
+    }
+    .search-box {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #inp-word {
+        width: 100%;
+    }
+    #search-btn {
+        width: 100%;
+    }
+}
+
+/* Optional: For even smaller screens like mobile devices */
+@media (max-width: 400px) {
+    #container {
+        margin-top: 10px;
+    }
+    .word button {
+        padding: 5px;
+    }
+    .word-meaning, .word-example {
+        font-size: 14px;
+    }
+}
+
+  .result button{
+    background-color: transparent;
+    color:var(--fourthcolor);
+    border: none;
+    outline: none;
+    font-size: 18px;
+ }
+
+
+.result .details{
+    display: flex;
+    gap: 10px;
+    color: var(--thirdcolor);
+    margin: 5px 0 20px 0;
+    font-size: 11px;
+} */
+
+ .word-meaning{
+    color: var(--thirdcolor);
+}
+
+.word-example{
+    color: var(--thirdcolor);
+    font-style: italic;
+    border-left: 5px solid var(--thirdcolor);
+    padding-left: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.error{
+  margin-top: 80px;
+  text-align: center;
+  font-family: var(--thirdfont);
+}  
+
+
+.box:hover{
+     color: #353d2f;
+     background-color: var(--secondcolor);
+     text-decoration: solid;
+     transform: scale(1.02);
+   }
+   
+#nottes {
+     max-width: 500px; /* Adjust the max width as needed */
+     margin: auto; /* Centers the div horizontally */
+     padding: 20px;
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+     }
+
+#noteList {
+    padding-left: 0; /* Remove default padding from list */
+}
+
+#noteList li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#noteList li:last-child {
+    border-bottom: none;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    #nottes {
+        padding: 10px;
+        margin-top: 20px;
+    }
+    #noteList li {
+        padding: 5px;
+    }
+}
+
+/* Optional: For even smaller screens like mobile devices */
+@media (max-width: 400px) {
+    #nottes {
+        margin-top: 10px;
+    }
+    #noteList li {
+        font-size: 14px;
+    }
+}
+       
+        
+  
+      </style>
+      
+
+
+        <audio id="sound"></audio>
+      <div class="container" id="container">
         <div class="search-box">
           <input type="text" placeholder="Type the word here.." id="inp-word" />
           <button id="search-btn">search</button>
@@ -75,19 +447,26 @@
             سوريا الحُرَّة الخضراء، هي بلد من بلاد الشام التي أخبرنا النبي ﷺ أنها مباركة، وكل من فيها مُبارك ("
           </p>
         </div>
-      </div>
-  
+      </div> 
 
-   
-      
+      <br><hr><hr><br><br>
 
-      <!-- <hr>
-      <hr>   
-      <hr> -->
-      
+      <article>
+        <p class="box">Enhance your vocabulary by frequently consulting a dictionary to learn new words and their meanings. Organize these new additions in a note list, which will allow you to easily review them later. This process will help reinforce your learning, improve your language skills, and make it easier to incorporate these words into your everyday writing and conversation over time.</p>
+      </article>
       
       <br>
+      <div class="mt-4" id="nottes">
+        <label for="noteInput" class="form-label" style="color: #353d2f;"><u><b>Add a Note:</b></u></label><br><br>
+        <input type="text" class="form-control" id="noteInput" placeholder="Enter Your Note..">
+        <button id="addNoteBtn" class="btn btn-success mt-2">Add Note</button>
+        <button id="clearNotesBtn" class=" btn btn-outline-danger">Clear All Notes</button><br><br><hr>
+        <ul id="noteList" class="list-group mt-3"></ul>
+    </div>
+
+
       
+      <br>
       <footer class="footer">
        <p> CopyWrite &copy; 2025 All rights reserved | <b>Gl✨w Encyclopedia</b> </p>
       </footer>
@@ -97,10 +476,87 @@
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-      <!-- this code help us to use fontawesome icons: -->
-       <!-- <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script> -->
-
       <script src="script.js"></script>
+
+
+<!-- The JavaScript code for the page: -->
+<script>
+  // Create the main variables for notes:
+  const noteInput = document.getElementById("noteInput");
+  const addNoteBtn = document.getElementById("addNoteBtn");
+  const clearNotesBtn = document.getElementById("clearNotesBtn");
+  const noteList = document.getElementById("noteList");
+
+  // Returns notes from Local Storage:
+  let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+  // View the notes when we reload the page:
+  function displayNotes() {
+      noteList.innerHTML = ""; // Clear existing list to prevent duplicates
+      notes.forEach(note => addNoteToDOM(note));
+  }
+
+  // Call the functions to display notes:
+  displayNotes();
+
+  // Add a new note:
+  addNoteBtn.addEventListener("click", function(){
+      const noteText = noteInput.value.trim();
+      if (noteText && noteText.length <= 400) { // Character limit
+          notes.push(noteText);
+          localStorage.setItem("notes", JSON.stringify(notes));
+          addNoteToDOM(noteText);
+          noteInput.value = "";
+      } else if (noteText.length > 400) {
+          alert("Note exceeds character limit of 400!"); // Notify user if input is too long
+      } else {
+          alert("Please enter a note!"); // Notify user if input is empty
+      }
+  });
+
+  // Allow adding notes with Enter key
+  noteInput.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+          event.preventDefault(); // Prevent form submission if inside a form
+          addNoteBtn.click(); // Trigger click event of the button
+      }
+  });
+
+  // Add note to DOM:
+  function addNoteToDOM(note){
+      const li = document.createElement("li");
+      li.className = "list-group-item d-flex justify-content-between align-items-center"; // Bootstrap list item class
+      li.textContent = note;
+
+      // Delete button:
+      const deleteBtn = document.createElement("button");
+      deleteBtn.className = "btn btn-outline-danger btn-sm delete-item"; // Bootstrap button classes
+      deleteBtn.textContent = "Delete";
+
+      deleteBtn.onclick = function(){
+          if (confirm("Are you sure you want to delete this note?")) { // Confirmation dialog
+              notes = notes.filter(n => n !== note);
+              localStorage.setItem("notes", JSON.stringify(notes));
+              li.remove();
+          }
+      };
+
+      li.appendChild(deleteBtn);
+      noteList.appendChild(li);
+  }
+
+  // Clear all notes functionality:
+  clearNotesBtn.addEventListener("click", function() {
+      if (confirm("Are you sure you want to clear all notes?")) { // Confirmation dialog
+          notes = [];
+          localStorage.setItem("notes", JSON.stringify(notes));
+          noteList.innerHTML = ""; // Clear the displayed list
+          alert("All notes have been cleared."); // Notify user
+      }
+  });
+</script>
+
+     
     </body>
 </html>
 
