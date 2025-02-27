@@ -59,10 +59,6 @@
               <a class="nav-link active" aria-current="page" href="otherprojects.html">Other Projects</a>
             </li>
           </ul>
-          <!-- <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form> -->
         </div>
       </div>
     </div>
@@ -471,11 +467,84 @@ media queries styling:  */
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-      <script src="script.js"></script>
+      <!-- <script src="script.js"></script> -->
 
 
 <!-- The JavaScript code for the page: -->
 <script>
+// ================DICTS==================
+const url= "https://api.dictionaryapi.dev/api/v2/entries/en/";
+const result= document.getElementById("result");
+const sound= document.getElementById("sound");
+const btn= document.getElementById("search-btn");
+
+btn.addEventListener("click" , () => {
+    let inpword = document.getElementById("inp-word").value;
+
+    fetch(`${url}${inpword}`)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log("API Data:", data);
+
+        if(!data || data.lenght ===0){
+          result.innerHTML= `<h3 class="error"> Couldn't Find The Word </h3>`
+          return;
+        }
+
+        let word= data[0];
+        let phoneticText= word.phonetic || (word.phonetics && word.phonetics.length > 0 ? word.phonetics[0].text : "");
+        let definition= word.meanings[0].definitions[0].definition;
+        let partOfSpeech= word.meanings[0].partOfSpeech;
+        let example= word.meanings[0].definitions[0].example || "";
+
+        let audioUrl= null;
+        if (word.phonetics && Array.isArray(word.phonetics)) {
+          for (let i= 0; i<word.phonetics.length; i++) {
+            if (word.phonetics[i].audio) {
+              audioUrl= word.phonetics[i].audio;
+              break;
+            }
+          }
+        }
+
+        result.innerHTML=`<div class="word">
+            <h3>${inpword}</h3>
+            <button onclick="playSound()" ${audioUrl ? "" : "disabled"}><i class="fa-solid fa-volume-high"></i></button>
+        </div>
+            <div class="details">
+                <p>${partOfSpeech}</p>
+                <p>/${phoneticText}/</p>
+            </div>
+          <p class="word-meaning"> ${definition} </p>
+                  <p class="word-example"> ${example}  </p>`;
+
+        if (audioUrl) {
+          sound.setAttribute("src", audioUrl);
+          sound.onerror= () => {
+            console.error("Error loading audio: ", audioUrl);
+            alert("Failed to load audio.");
+          };
+        } else {
+          sound.removeAttribute("src");
+          console.warn("No audio prounciation found for this word.");
+        }
+      })
+
+      .catch(  (error) => {
+        console.error("Fetch error: ", error);
+        result.innerHTML= `<h3 class="error"> Couldn't Find The Word </h3>`;
+      });
+    });
+
+
+function playSound() {
+  sound.play().catch(error => {
+    console.error("Playback failed: ", error);
+    alert("Audio playback failed. Check console for details.");
+  });
+}
+
+// ================NOTES==================
   // Create the main variables for notes:
   const noteInput = document.getElementById("noteInput");
   const addNoteBtn = document.getElementById("addNoteBtn");
