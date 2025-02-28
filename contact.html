@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact Us</title>
     <!-- font font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,19 @@
 
     <!-- add style to contact page  -->
     <style>
+
+      /* create root for css variables:  */
+:root{
+  --firstfont:  Arial, sans-serif;
+  --secondfont: "Josefin Sans";
+  --thirdfont: "Agu Display";
+  --firstcolor: #e0dfdb;
+  --secondcolor: #CEDEBD;
+  --thirdcolor: #788d5f;
+  --fourthcolor: #353d2f;
+  --fifthcolor: #0fa50f;
+}
+
 .btn{
   color:  #808080;
 }
@@ -35,7 +48,7 @@
 }
 #contact{
   padding: 100px 0;
-  background: #353D2F;
+  background: var(--fourthcolor);
 }
 #contact .container1{
   max-width: 900px;
@@ -51,7 +64,7 @@
 }
 #contact .contact-content .contact-info h3{
   font-size: 28px;
-  color: #0fa50f;
+  color: var(--fifthcolor);
   margin-bottom: 10px;
 
 }
@@ -74,7 +87,7 @@ form input{
   margin: 20px 0;
 }
 #contact .btn {
-  background-color:#047a04;
+  background-color:var(--fifthcolor);
   color: white;
   font-size: 16px;
   padding: 3px 5px;
@@ -85,8 +98,8 @@ form input{
 }
 #contact .btn:hover{
   background-color: transparent;
-  border-color: #e7fce6;
-  color: #e7fce6;
+  border-color: var(--firstcolor);
+  color: var(--firstcolor);
 }
 
 .fa-brands{
@@ -107,9 +120,9 @@ form input{
   font-family: Arial, sans-serif; /* Sets a clean, modern font */
   font-size: 16px; /* Sets a comfortable font size */
   color: #3f5e43; /* Dark gray text color for readability */
-  background-color: #f9f9f9; /* Light background color for contrast */
+  background-color: var(--fifthcolor); /* Light background color for contrast */
   padding: 15px; /* Adds space inside the paragraph */
-  border: 1px solid #ddd; /* Light border for definition */
+  border: 1px solid var(--fifthcolor); /* Light border for definition */
   border-radius: 5px; /* Rounded corners for a softer look */
   box-shadow: 0 2px 5px rgba(38, 71, 40, 0.1); /* Subtle shadow for depth */
   margin: 20px auto; /* Adds space above and below the paragraph and centers it */
@@ -117,6 +130,9 @@ form input{
   text-align: center; /* Centers the text inside the paragraph */
 }
 
+.i:hover{
+  color: var(--fifthcolor);
+}
 
 
 
@@ -372,16 +388,16 @@ form input{
           <hr style="color: #e7fce6;"><br>
           <div>
               <h3>FOLLOW US</h3>
-              <a href="https://www.facebook.com/sador.amer.9" target="_blank"><i class="fa-brands fa-facebook" style="font-size: 20px;"></i></a>
-              <a href="https://wa.me/message/PUVXKADRZKLRP1 " target="_blank"><i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i></a>
-              <a href="https://t.me/Sido_am" target="_blank"><i class="fa-brands fa-telegram" style="font-size: 20px;"></i></a>
+              <a href="https://www.facebook.com/sador.amer.9" target="_blank"><i class="fa-brands fa-facebook i" style="font-size: 20px;"></i></a>
+              <a href="https://wa.me/message/PUVXKADRZKLRP1 " target="_blank"><i class="fa-brands fa-whatsapp i" style="font-size: 20px;"></i></a>
+              <a href="https://t.me/Sido_am" target="_blank"><i class="fa-brands fa-telegram i" style="font-size: 20px;"></i></a>
           </div>
       </div>
 
       <!-- <div class="col-md-6 contact-form"> -->
         
         <form>
-          <h3 style="color: #ddd;"><u>Send us a Message:</u></h3>
+          <h2 style="color: #ddd;"><u>Send us a Message:</u></h2>
           <p style="font-size: 15px; color: #808080;">'A bogus message example.'</p>
           <input type="text" name="Name" id="Name" placeholder="Full Name" required>
           <input type="email" name="email" id="email" placeholder="Email Address" required>

@@ -22,10 +22,299 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- add style to about page  -->
-     <style>
-      .h1, .h3{
-        text-align: center;
+    <style>
+
+      :root{
+          --firstfont:  Arial, sans-serif;
+          --secondfont: "Josefin Sans";
+          --thirdfont: "Agu Display";
+          --firstcolor: #e0dfdb;
+          --secondcolor: #CEDEBD;
+          --thirdcolor: #788d5f;
+          --fourthcolor: #353d2f;
+          --fifthcolor: #0fa50f;
+          }
+     
+     
+     .rt{
+       border: 2px solid black; /* Border width, style, and color */
+       padding: 5px;
+       background-image: url("giphy.gif");
+       color: var(--firstcolor);
+     }
+     
+     .h1, .h3{
+             text-align: center;
+           }
+     
+
+    .h1:hover{
+      transform: scale(1.03);
+    }
+
+     .def{
+           color: var(--firstcolor);
+          }
+
+          .glow-text {
+            text-shadow: none;
+            transition: text-shadow 0.3s ease;
+          }
+
+          .glow-text:hover {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0fa50f;
+          }
+
+     
+     .h5{
+            color: var(--firstcolor);
+            text-shadow: 1px 1px 2px #000000;
+          }
+     
+      .des{
+            color: var(--firstcolor);
+            text-shadow: 1px 1px 2px #000000;
+            /* text-shadow: 0 0 3px #FF0000; */
+            background-color: var(--thirdcolor);
+          }
+     
+     .btnn{
+          border: 0;
+          background-color: var(--fourthcolor);
+          border-radius: 50px;
+          padding: 10px 60px;
+          cursor: pointer;
+       }
+     
+     
+     .btnn:hover{
+          transform: scale(1.05);
+          background-image: url("green.gif");
+        }
+     
+     a{
+          text-decoration: none;
+          color: var(--firstcolor);
+        }
+     
+     .box{
+          box-shadow: 1px 1px 1px --secondcolor;
+          background-color: var(--firstcolor);
+          margin: 20px;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          background-image: url("green.gif");
+        }
+     
+        .container{
+       max-width: 960px;
+       margin: 20px auto;
+       padding: 20px;
+       background-color: var(--firstcolor);
+       box-shadow: 0 20px 40px rgba(53, 61, 47, 0.1);
       }
+     
+     
+     /* ----------------------------------------------------------------------------------------------------
+     searching box styling:  */
+     
+     .search-box{
+         display: flex;
+         margin-bottom: 20px;
+      }
+     
+      .search-box input[type="text"]{
+       flex:1;
+       padding: 10px;
+       border: 0.5px solid var(--secondcolor);
+       border-radius: 5px;
+       font-size: 1rem;
+      }
+     
+      .search-box button{
+         padding: 10px 20px;
+         width: 25%;
+         background-color: var(--fourthcolor);
+         border: none;
+         color: var(--firstcolor);
+         border-radius: 5px;
+         cursor: pointer;
+         transition: background-color 0.3s;
+      }
+     
+      .search-box button:hover{
+     /* background-color: #3f5e43; */
+     background-image: url("green.gif");
+     color: var(--firstcolor);
+     text-decoration: solid;
+      }
+     
+     
+      /* ----------------------------------------------------------------------------------------------------
+     result styling:  */
+     
+      .result{
+         padding: 20px;
+         border: 1px solid --fourthcolor;
+         border-radius: 5px;
+      }
+     
+      .result h3{
+         font-size: 30px;
+         color: var(--fourthcolor);
+      }
+     
+      .result .word{
+         display: flex;
+         justify-content:space-between;
+         margin-top: 30px;
+      }
+     
+      .word{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-bottom: 10px;
+      }
+     
+     .word h3{
+       font-size: 1.5rem;
+     }
+     
+     .word button{
+       background-color: transparent;
+       border: none;
+       cursor: pointer;
+       color: var(--fourthcolor);
+       transition: color 0.3s;
+     }
+     
+     .word button:hover{
+       color: var(--thirdcolor) ;
+     }
+     
+     
+     /* ----------------------------------------------------------------------------------------------------
+     media queries styling:  */
+     
+     @media (max-width: 768px) {
+         #container {
+             padding: 10px;
+         }
+         .search-box {
+             flex-direction: column;
+             gap: 5px;
+         }
+         #inp-word {
+             width: 100%;
+         }
+         #search-btn {
+             width: 100%;
+         }
+     }
+     
+     /* Optional: For even smaller screens like mobile devices */
+     @media (max-width: 400px) {
+         #container {
+             margin-top: 10px;
+         }
+         .word button {
+             padding: 5px;
+         }
+         .word-meaning, .word-example {
+             font-size: 14px;
+         }
+     }
+     
+       .result button{
+         background-color: transparent;
+         color:var(--fourthcolor);
+         border: none;
+         outline: none;
+         font-size: 18px;
+      }
+     
+     
+     .result .details{
+         display: flex;
+         gap: 10px;
+         color: var(--thirdcolor);
+         margin: 5px 0 20px 0;
+         font-size: 11px;
+     } 
+     
+      .word-meaning{
+         color: var(--thirdcolor);
+     }
+     
+     .word-example{
+         color: var(--thirdcolor);
+         font-style: italic;
+         border-left: 5px solid var(--thirdcolor);
+         padding-left: 10px;
+         margin-top: 30px;
+         margin-left: 10px;
+     }
+     
+     .error{
+       margin-top: 80px;
+       text-align: center;
+       font-family: var(--thirdfont);
+     }  
+     
+     
+     .box:hover{
+          color: #353d2f;
+          background-color: var(--secondcolor);
+          text-decoration: solid;
+          transform: scale(1.02);
+        }
+        
+     #nottes {
+          max-width: 500px; /* Adjust the max width as needed */
+          margin: auto; /* Centers the div horizontally */
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          }
+     
+     #noteList {
+         padding-left: 0; /* Remove default padding from list */
+     }
+     
+     #noteList li {
+         padding: 10px;
+         border-bottom: 1px solid #ddd;
+     }
+     
+     #noteList li:last-child {
+         border-bottom: none;
+     }
+     
+     /* Media Query for smaller screens */
+     @media (max-width: 768px) {
+         #nottes {
+             padding: 10px;
+             margin-top: 20px;
+         }
+         #noteList li {
+             padding: 5px;
+         }
+     }
+     
+     /* Optional: For even smaller screens like mobile devices */
+     @media (max-width: 400px) {
+         #nottes {
+             margin-top: 10px;
+         }
+         #noteList li {
+             font-size: 14px;
+         }
+     }
      </style>
   </head>
 
@@ -97,9 +386,9 @@
       <section>
         <article class="rt">
           <br><br><br>
-          <h1 class="h1 pb-1" style="padding: 10px;">Hello! My name is <b><u><a class="def" href="sido.mp4">Sidra Amer</a></u></b>.</h1><br>
-          <h4 class="h3">We’re about to start something exciting.
-            Welcome to <b>Glow Encyclopedia!</b> We’re glad you have decided to visit us.
+          <h1 class="h1 pb-1" style="padding: 10px;">Hello! My name is <br> <b><u><a class="def glow-text" href="sido.mp4">Sidra Amer</a></u></b>.</h1><br>
+          <h4 class="h3">Welcome to <b>Glow Encyclopedia!</b> We’re glad you have decided to visit us. <br>
+            We’re about to start something exciting. <br>
             We want to make your onboarding experience free of worry. </h4> <br><br>
             <div class="d-flex justify-content-center">
               <div class="spinner-grow" role="status">
@@ -132,288 +421,11 @@
       <div class="d-grid gap-2 col-6 mx-auto">
         <button class="btnn btn-outline-success" type="button"><a href="#container">Dictionary</a></button>
         <button class="btnn btn-outline-success" type="button"><a href="#nottes">Notes</a></button>
-        <button class="btnn btn-outline-success" type="button"><a href="books.html">Books</a></button>
+        <button class="btnn btn-outline-success" type="button"><a href="library.html">Books</a></button>
       </div> <br><hr><hr>
       
 
- <style>
-
- :root{
-     --firstfont:  Arial, sans-serif;
-     --secondfont: "Josefin Sans";
-     --thirdfont: "Agu Display";
-     --firstcolor: #e0dfdb;
-     --secondcolor: #CEDEBD;
-     --thirdcolor: #788d5f;
-     --fourthcolor: #353d2f;
-     --fifthcolor: #0fa50f;
-     }
-
-
-.rt{
-  border: 2px solid black; /* Border width, style, and color */
-  padding: 5px;
-  background-image: url("giphy.gif");
-  color: var(--firstcolor);
-}
-
-.def{
-      color: var(--firstcolor);
-     }
-
-.h5{
-       color: var(--firstcolor);
-       text-shadow: 1px 1px 2px #000000;
-     }
-
- .des{
-       color: var(--firstcolor);
-       text-shadow: 1px 1px 2px #000000;
-       /* text-shadow: 0 0 3px #FF0000; */
-       background-color: var(--thirdcolor);
-     }
-
-.btnn{
-     border: 0;
-     background-color: var(--fourthcolor);
-     border-radius: 50px;
-     padding: 10px 60px;
-     cursor: pointer;
-  }
-
-
-.btnn:hover{
-     transform: scale(1.05);
-     background-image: url("green.gif");
-   }
-
-a{
-     text-decoration: none;
-     color: var(--firstcolor);
-   }
-
-.box{
-     box-shadow: 1px 1px 1px --secondcolor;
-     background-color: var(--firstcolor);
-     margin: 20px;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     padding-top: 5px;
-     padding-bottom: 5px;
-     background-image: url("green.gif");
-   }
-
-   .container{
-  max-width: 960px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: var(--firstcolor);
-  box-shadow: 0 20px 40px rgba(53, 61, 47, 0.1);
- }
-
-
-/* ----------------------------------------------------------------------------------------------------
-searching box styling:  */
-
-.search-box{
-    display: flex;
-    margin-bottom: 20px;
- }
-
- .search-box input[type="text"]{
-  flex:1;
-  padding: 10px;
-  border: 0.5px solid var(--secondcolor);
-  border-radius: 5px;
-  font-size: 1rem;
- }
-
- .search-box button{
-    padding: 10px 20px;
-    width: 25%;
-    background-color: var(--fourthcolor);
-    border: none;
-    color: var(--firstcolor);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
- }
-
- .search-box button:hover{
-/* background-color: #3f5e43; */
-background-image: url("green.gif");
-color: var(--firstcolor);
-text-decoration: solid;
- }
-
-
- /* ----------------------------------------------------------------------------------------------------
-result styling:  */
-
- .result{
-    padding: 20px;
-    border: 1px solid --fourthcolor;
-    border-radius: 5px;
- }
-
- .result h3{
-    font-size: 30px;
-    color: var(--fourthcolor);
- }
-
- .result .word{
-    display: flex;
-    justify-content:space-between;
-    margin-top: 30px;
- }
-
- .word{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
- }
-
-.word h3{
-  font-size: 1.5rem;
-}
-
-.word button{
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--fourthcolor);
-  transition: color 0.3s;
-}
-
-.word button:hover{
-  color: var(--thirdcolor) ;
-}
-
-
-/* ----------------------------------------------------------------------------------------------------
-media queries styling:  */
-
-@media (max-width: 768px) {
-    #container {
-        padding: 10px;
-    }
-    .search-box {
-        flex-direction: column;
-        gap: 5px;
-    }
-    #inp-word {
-        width: 100%;
-    }
-    #search-btn {
-        width: 100%;
-    }
-}
-
-/* Optional: For even smaller screens like mobile devices */
-@media (max-width: 400px) {
-    #container {
-        margin-top: 10px;
-    }
-    .word button {
-        padding: 5px;
-    }
-    .word-meaning, .word-example {
-        font-size: 14px;
-    }
-}
-
-  .result button{
-    background-color: transparent;
-    color:var(--fourthcolor);
-    border: none;
-    outline: none;
-    font-size: 18px;
- }
-
-
-.result .details{
-    display: flex;
-    gap: 10px;
-    color: var(--thirdcolor);
-    margin: 5px 0 20px 0;
-    font-size: 11px;
-} */
-
- .word-meaning{
-    color: var(--thirdcolor);
-}
-
-.word-example{
-    color: var(--thirdcolor);
-    font-style: italic;
-    border-left: 5px solid var(--thirdcolor);
-    padding-left: 10px;
-    margin-top: 30px;
-    margin-left: 10px;
-}
-
-.error{
-  margin-top: 80px;
-  text-align: center;
-  font-family: var(--thirdfont);
-}  
-
-
-.box:hover{
-     color: #353d2f;
-     background-color: var(--secondcolor);
-     text-decoration: solid;
-     transform: scale(1.02);
-   }
-   
-#nottes {
-     max-width: 500px; /* Adjust the max width as needed */
-     margin: auto; /* Centers the div horizontally */
-     padding: 20px;
-     background-color: #fff;
-     border-radius: 10px;
-     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-     }
-
-#noteList {
-    padding-left: 0; /* Remove default padding from list */
-}
-
-#noteList li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-#noteList li:last-child {
-    border-bottom: none;
-}
-
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
-    #nottes {
-        padding: 10px;
-        margin-top: 20px;
-    }
-    #noteList li {
-        padding: 5px;
-    }
-}
-
-/* Optional: For even smaller screens like mobile devices */
-@media (max-width: 400px) {
-    #nottes {
-        margin-top: 10px;
-    }
-    #noteList li {
-        font-size: 14px;
-    }
-}
-       
-        
-  
-      </style>
+ 
       
 
 
@@ -467,8 +479,6 @@ media queries styling:  */
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-      <!-- <script src="script.js"></script> -->
-
 
 <!-- The JavaScript code for the page: -->
 <script>
@@ -480,6 +490,7 @@ const btn= document.getElementById("search-btn");
 
 btn.addEventListener("click" , () => {
     let inpword = document.getElementById("inp-word").value;
+    alert("The result might take a few seconds ((:")
 
     fetch(`${url}${inpword}`)
     .then((response) => response.json())
