@@ -192,10 +192,6 @@
         /* margin: 1px; */
     }
 
-    /* button{
-        margin: 10px;
-    } */
-
     .navbar-brand{
       font-size: 20px;
       font-weight: 800;
@@ -209,9 +205,48 @@
     color: var(--fifthcolor);
 }
 
-    /* button:hover , a:hover{
-        transform: scale(1.05s);
-    } */
+.rt{
+       /* border: 2px solid black; Border width, style, and color */
+       padding: 5px;
+       /* background-image: url("giphy.gif"); */
+       background-image: url(green.gif);
+       color: var(--firstcolor);
+     }
+     
+     .h1{
+             text-align: center;
+             text-shadow: none;
+            transition: text-shadow 0.3s ease;
+           }
+     
+
+           .h1:hover{
+      transform: scale(1.03);
+      text-shadow: 0 0 5px #e0dfdb, 0 0 20px #0fa50f, 0 0 30px #e0dfdb;
+    }
+
+    .box{
+          box-shadow: 1px 1px 1px var(--secondcolor);
+          background-color: var(--firstcolor);
+          margin: 20px;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          background-color: transparent;
+        }
+
+        .box:hover{
+          color: #353d2f;
+          text-decoration: solid;
+          transform: scale(1.02);
+        }
+
+        p{
+        text-align: center;
+    }
+
     </style>
 
   </head>
@@ -259,10 +294,20 @@
       </nav>
       
 
-      <hr>
-      <hr>
-      <hr>
+      <article class="rt">
+        <br><br><br>
+        <h1 class="h1 pb-1" style="padding: 10px; line-height: 40px">Other Projects</h1><br>
+          </article>
+          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-success" style="width: -25%"></div>
+          </div>
 
+
+          <br>
+      <article>
+        <p class="box">Here, you can explore the projects I developed during my journey with the <b>CodeBrave Scholarship</b>. These initiatives reflect the skills and knowledge I gained through this impactful program, empowering me with cutting-edge tech education.<br><br></p>
+        <p>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</p><br>
+      </article>
 
 
       <section>
@@ -437,12 +482,7 @@
     </section>
 
 
-      <hr>
-      <hr>   
-      <hr>
-      
-      
-      <br>
+      <br><hr><br>
       
       <footer class="footer">
        <p> CopyWrite &copy; 2025 All rights reserved | <b>Gl✨w Encyclopedia</b> </p>

@@ -38,22 +38,21 @@
     }
     
     .rt{
-  border: 2px solid black; /* Border width, style, and color */
-  padding: 5px;
-  background-image: url("giphy.gif");
+  background-image: url(green.gif);
   color: var(--firstcolor);
   text-align: center;
+  padding: 70px;
+  
 }
 
 #title{
   color: var(--firstcolor);
   font-family: var(--secondfont);
-  font-size: 25px;
+  font-size: 17px;
   cursor: default;
   position: absolute;
   transform: translate(-50% , -50%);
   text-align: center;
-   /* top: 50%; */
   left: 50%; 
 }
 
@@ -63,19 +62,31 @@
 }
 
 .box{
-          box-shadow: 1px 1px 1px var(--secondcolor);
-          /* background-color: var(--firstcolor); */
-          margin: 20px;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding-top: 5px;
-          padding-bottom: 5px;
-          /* background-image: url("green.gif"); */
+        box-shadow: 1px 1px 1px var(--secondcolor);
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .box:hover{
+          color: #353d2f;
+          text-decoration: solid;
+          transform: scale(1.02);
         }
 
         p{
         text-align: center;
+    }
+
+    .h1{
+        text-align: center;
+        }
+
+        .h1:hover{
+      transform: scale(1.03);
     }
 
     .container {
@@ -88,9 +99,6 @@
     box-shadow: 0 0 10px rgba(53, 61, 47,0.1);
     }
 
-    .container:hover{
-      transform: scale(1.1);
-    }
     
     .search-container {
     margin-bottom: 20px;
@@ -109,7 +117,7 @@
     width: 20%;
     height: 30px;
     font-size: 16px;
-    background-color: var(--fourthcolor);
+    background-color: var(--fifthcolor);
     color: var(--firstcolor);
     border: none;
     cursor: pointer;
@@ -148,7 +156,7 @@
     
 .btnn{
      border: 0;
-     background-color: var(--fourthcolor);
+     background-color: var(--fifthcolor);
      border-radius: 5px;
      padding: 5px 5px;
      cursor: pointer;
@@ -164,6 +172,12 @@ a{
      text-decoration: none;
      color: var(--firstcolor);
    }
+
+   @media (max-width: 768px) {
+    .rt{
+      padding: 100px;
+    }
+     }
 
       </style> 
   </head>
@@ -202,23 +216,31 @@ a{
             </div>
           </div>
         </nav>
-        <br><hr><br>
+        <br><hr>
 
-        <article class="rt" style="padding: 70px;">
+        <article class="rt">
         <div class="container1">
           <div id="title">
             Books have the power to transport us to different eras and cultures, enriching our understanding of the world.
         </div>
       </div>
     </article>
+    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar bg-success" style="width: -25%"></div>
+    </div>
         
-    <hr>
-    <p class="box">HERE you have a list of books based on your search value, and the results will be retrieved using an API feature. <br><br>
-      enter a keyword to discover a list of books. Found something you like? Save it for later reading!</p>   
-    <p>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</p>
+  
+    <br><hr><hr><br><br>
+    <article>
+      <h1 class="h1 pb-1" style="padding: 10px;"><u>What do book library do?</u></h1>
+      <p class="box">HERE you have a list of books based on your search value, and the results will be retrieved using an API feature. <br>
+        enter a keyword to discover a list of books. Found something you like? Save it for later reading!<br><br></p>
+      <p>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</p><br>
+    </article>
+
 
           <div class="container" id="books">
-              <h1>Book Library</h1>
+              <h1>Book Library</h1><br>
               <div class="search-container">
                   <input type="text" id="search-input" placeholder="Search for books..">
                   <button id="search-button">Search</button><hr>
@@ -226,7 +248,7 @@ a{
               <div id="books-container"></div>
           </div>
   
-          <br><br><br> <hr><br>
+          <!-- <br><br><br> <hr><br> -->
 
           <!-- <p class="box">HERE you can schedule your reading time.. click and start.</p>    
           <p>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</p> -->
@@ -234,6 +256,13 @@ a{
           <!-- <div class="d-grid gap-2 col-6 mx-auto">
             <button class="btnn btn-outline-success" type="button"><a href="book.html">Your List Of Books</a></button>
           </div> <br> -->
+
+          <br><hr><hr><br><br>
+    <article>
+      <h1 class="h1 pb-1" style="padding: 10px;"><u>What do schedule time do?</u></h1>
+      <p class="box">Just click on the button <b>`Schedule Your Reading Time`</b> to plan a perfect moment for reading. Determine a suitable time that fits your schedule, allowing you to immerse yourself in your favorite books without distractions.<br><br></p>
+      <p>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</p><br>
+    </article>
 
           <div class="d-grid gap-2 col-6 mx-auto">
             <button class="btnn btn-outline-success" type="button"><a href="book.html">Schedule Your Reading Time</a></button>
