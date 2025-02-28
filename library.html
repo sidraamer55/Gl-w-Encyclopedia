@@ -45,8 +45,25 @@
   text-align: center;
 }
 
+#title{
+  color: var(--firstcolor);
+  font-family: var(--secondfont);
+  font-size: 25px;
+  cursor: default;
+  position: absolute;
+  transform: translate(-50% , -50%);
+  text-align: center;
+   /* top: 50%; */
+  left: 50%; 
+}
+
+.glow{
+  color: var(--fifthcolor);
+  text-shadow: 0 0 8px var(--firstcolor);
+}
+
 .box{
-          box-shadow: 1px 1px 1px --secondcolor;
+          box-shadow: 1px 1px 1px var(--secondcolor);
           /* background-color: var(--firstcolor); */
           margin: 20px;
           justify-content: center;
@@ -187,12 +204,20 @@ a{
         </nav>
         <br><hr><br>
 
-        <article class="rt">
+        <!-- <article class="rt">
           <br><br><br>
           <h1 class="h1 pb-1" style="padding: 10px;">Books have the power to transport us to different eras and cultures, enriching our understanding of the world.</h1><br>
            <br><br><br>
-        </article>
+        </article> -->
 
+
+        <article class="rt" style="padding: 70px;">
+        <div class="container1">
+          <div id="title">
+            Books have the power to transport us to different eras and cultures, enriching our understanding of the world.
+        </div>
+      </div>
+    </article>
         
     <hr>
     <p class="box">HERE you have a list of books based on your search value, and the results will be retrieved using an API feature. <br><br>
@@ -231,6 +256,63 @@ a{
    
 <!-- the script code for this page: -->
 <script>
+
+  // glow style by js code
+let div= document.getElementById('move-div');
+let title= document.getElementById('title');
+let titlechars = title.innerText.split('');
+
+title.innerHTML= '';
+window.onload= () => {
+  titlechars.forEach((char, index) =>{
+ let span= document.createElement('span');
+ span.innerText= char;
+ span.id= "char-" + index;
+ title.appendChild(span);
+  });
+};
+
+const isTouchDevice = () => {
+  try{
+    document.createEvent('TouchEvent');
+    deviceType= 'touch';
+    return true;
+  } catch (e){
+    deviceType= 'mouse';
+    return false;
+  }
+};
+
+
+function calculateDistance(element, mouseX, mouseY){
+  const rect= element.getBoundingClientRect();
+  const elemX= rect.left + rect.width /2;
+  const elemY= rect.top + rect.height /2;
+  return Math.sqrt(Math.pow(mouseX - elemX,2) + Math.pow(mouseY - elemY, 2));
+}
+
+
+const move= (e) => {
+  const x = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
+  const y = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
+
+  titlechars.forEach((_, index) => {
+    let charElem = document.getElementById('char-' + index);
+    let distance = calculateDistance(charElem, x, y);
+
+    if(distance < 20){
+      charElem.classList.add('glow');
+    } else {
+      charElem.classList.remove('glow')
+    }
+  });
+};
+
+document.addEventListener('mousemove', move);
+document.addEventListener('touchmove', move);
+
+
+// list of book 
   document.getElementById('search-button').addEventListener('click', searchBooks);
  
   function searchBooks() {
