@@ -137,9 +137,9 @@
                 <div class="contact-info">
            <div>
               <h3><b><u>CONTACT US</u></b></h3>
-              <p><i class="fa-solid fa-location-dot"></i>Syria / Al-Quoser / Jouseah</p>
-              <p><i class="fa-solid fa-phone"></i>Phone : +96176569499</p>
-              <p><i class="fa-regular fa-envelope"></i>sidraamer125@gmail.com</p>
+              <p><i class="fa-solid fa-location-dot"></i> Free Syria / Homs / Jouseah</p>
+              <p><i class="fa-regular fa-envelope"></i> sidraamer125@gmail.com</p>
+              <p><i class="fa-solid fa-phone"></i> +96176569499</p>
           </div>
           <hr>
           <div>
@@ -150,6 +150,8 @@
           </div>
       </div>
       <form>
+          <!-- <h2 style="color: white;"><u>Send us a Message:</u></h2> -->
+          <p style="font-size: 15px; color: white;">'A bogus message example.'</p>
           <input type="text" name="Name" id="Name" placeholder="Full Name" required>
           <input type="email" name="email" id="email" placeholder="Email Address" required>
           <input type="text" name="Subject" id="Subject" placeholder="Subject" required>
@@ -173,15 +175,13 @@
 
 #contact{
   padding: 100px 0;
-  background-color: var(--fifthcolor);
+  background-image: url(green.gif);
 }
+
 #contact .container1{
   max-width: 900px;
 }
 
-#contact:hover{
-  background-image: url(green.gif);
-}
 
 #contact .contact-content{
   display: flex;
@@ -230,11 +230,20 @@ form input{
   background-color: transparent;
   border-color: #e7fce6;
   color: #e7fce6;
+  transform: scale(1.03);
+  text-shadow: 0 0 5px #e0dfdb, 0 0 20px #0fa50f, 0 0 30px #e0dfdb;
 }
 
 .fa-brands{
   padding: 1px 5px ;
   margin: 20px 0;
+  font-size: 18px;
+}
+
+.fa-brands:hover{
+  color: white;
+  transform: scale(1.03);
+  text-shadow: 0 0 5px #e0dfdb, 0 0 20px #0fa50f, 0 0 30px #e0dfdb;
 }
 
 .fa-solid{
